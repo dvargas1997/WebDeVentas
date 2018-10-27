@@ -10,34 +10,81 @@
     margin: 0px;
     width: 100%;
     height: 1000px;
-    
-   }
+
+        background-image:url( fondo1.jpg);
+   }url(https://fonts.googleapis.com/css?family=Erica+One);
+/* BODY */
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+     background-image:url( fondo1.jpg);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+::selection {
+  background: transparent;
+}
+
+h1 {
+  cursor: default;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  margin: auto;
+  display: block;
+  -webkit-animation: bounce .2s ease infinite alternate;
+  font-family: 'Erica One', cursive;
+  font-size: 170px;
+  color: #FFF;
+  text-align: center;
+  line-height: 100px;
+  text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* ANIMATION */
+@-webkit-keyframes bounce {
+  100% {
+    top: 30px;
+    text-shadow: 0 0px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 #CCC, 0 7px 0 #CCC, 0 8px 0 #CCC, 0 9px 0 #CCC, 0 0px 0px rgba(0, 0, 0, 0.3);
+  }
+}
    header {
-    background-color: #black;
+   
     text-orientation: center;
-    font-size:40px;
+    font-size:50px;
     width: 100%;
-    height: 35%;
+    height: 30%;
     font-family: 'Monoton', cursive;
-    background-image:url(anim.jpg);
+    background-image:url();
    }
    nav{
-    background-color: #FFE4B5;
+    
     width: 100%;
-    height: 20%;
+    height: 10%;
     font-family: 'Playfair Display SC', serif;
     font-family: 'Handlee', cursive;
     font-family: 'Gochi Hand', cursive;
     font-family: 'Copse', serif;
    }
    section{
-    background-color: grey;
+    
+
     width: 100%;
-    height: 90%;
+    height: 100%;
    }
    
    footer{
-    background-color: #F5DEB3;
+      
     width: 100%;
     height: 12%;
    }
@@ -46,23 +93,25 @@
     margin: 0px;
     position:inherit;
     height: 100%;
-    
-   }
-   #menu li{
-    height: 40px;
+    height: 50px;
     width: 200px;
     text-align: center;
     float : left; 
     margin-right:  100px;
     line-height: 60px;
-    background-color: ;
-    color: grey;
+ 
+    
     font-size: 40px;
     color: black;
-    list-style:none;
+   
    }
+   
    h1{
-    margin:  0px;
+    margin:  10px;
+    color: black
+   }
+   h2{
+    color: black;
    }
    #contacto{
     margin-top: 0px;
@@ -70,10 +119,51 @@
    #contacto li{
     list-style:none;
    }
-   p{
+   strong{
     font-size: 30px;
     text-align: left;
    }
+   p{ font-size: 30px;
+    text-align: left;}
+.ex2 img{
+height: 100px;
+width: 100px;
+margin: 30px 0;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;;
+}
+.ex2 img:hover {
+height: 250px;
+width: 250px;
+margin-left: -80px;
+}
+button{
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #318aac;
+  border: 2px solid;
+  border-color: #318aac;
+  position: relative;
+}
+button:before {
+  content:"";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 2s ease;
+}
+button:hover:before {
+width: 100%;
+}
+
+
    
    </style>
  </head>
@@ -82,24 +172,18 @@
                 <br>
                 <br>
                 <br>
-           <font face ="Arial Black"><center><h1 style ="text-align:center ">+KOTITAS</h1></center></font>
-                      
+          <h1>Carrito</h1>
+
   
         </header>
   <nav> 
-   <ul id ="menu" >
-     <hgroup>
-     <li><h3><a href="index.html">vestuario </a></h3></li>
-            <li><h3><a href="in.html">accesorio </a></h3></li>
-                  </hgroup>
-            </ul> 
+  
         </nav>
   <section>
 
-  <br>
-  <br>
-  <p></p>
-  <br>
+
+ 
+
                              
          </form>
   <font size="8"></font>
