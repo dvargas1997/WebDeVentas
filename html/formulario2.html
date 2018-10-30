@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang=es>
+	<head>
+		<title>Registro Cliente</title>
+		<meta charset="UTF-8">
+	</head>
+	<body style="background-color:#4CDE35">
+		<form action="ingresa2.php" onsubmit="return Validar(this)" method="post">
+			<fieldset style="background-color:#BCF52D">
+				<legend style="background-color:#ED9E49">Datos Personales</legend>
+				<label for="nom">*Nombre</label> <input type="text" id="nom" name="nom" placeholder="Nombre">
+				<label for="ape">*Apellido</label> <input type="text" id="ape" name="ape" placeholder="Apellido"><br>
+				<label for="ema">*email</label> <input type="email" name="ema" id="ema" placeholder="ejemplo@ejemplo.com">
+				<label for="cue">*Nro. Telefono</label> <input type="number" id="cue" name="cue" placeholder="912345678"><br>
+				Sexo <input type="radio" name="sex" id="sexM"> M
+					 <input type="radio" name="sex" id="sexF"> F<br>
+			</fieldset>
+			<input type="checkbox" id="tdr" name="tdr">
+			<label for="tdr">*Acepto los Términos</label><br>
+			<p> * = Campos obligatorios.</p>
+			<input type="submit">
+		</form>		      
+	</body>
+</html>
