@@ -1,0 +1,21 @@
+*{
+	font-family:Verdana;
+	font-size:12px;
+}
+body{
+	background:url(img/anim.jpg) center fixed;
+}
+fieldset{
+	background-color:lightblue;
+	border-color:purple;
+}
+legend{
+	background-color:lightblue;
+}
+label{
+	background-color:lightblue;
+}
+p{
+	background-color:lightblue;
+	margin-right:1150px;
+}
