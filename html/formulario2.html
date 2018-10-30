@@ -3,6 +3,41 @@
 	<head>
 		<title>Registro Cliente</title>
 		<meta charset="UTF-8">
+		<script>
+			function Validar(RegistroCliente)
+			{
+				if(RegistroCliente.nom.value=="") {
+					alert("El Nombre no puede estar vacío")
+					RegistroCliente.nom.focus();
+					return false;
+				}
+				if(RegistroCliente.ape.value=="") {
+					alert("El Apellido no puede estar vacío")
+					RegistroCliente.ape.focus();
+					return false;
+				}
+				if(RegistroCliente.ema.value=="") {
+					alert("ingrese su correo electronico")
+					RegistroCliente.ema.focus();
+					return false;
+				}
+				if(RegistroCliente.cue.value=="") {
+					alert("ingrese su numero de contacto")
+					RegistroCliente.cue.focus();
+					return false;
+				}
+				if(RegistroCliente.id.value=="") {
+					alert("ingrese id de registro")
+					RegistroCliente.id.focus();
+					return false;
+				}
+				if(RegistroCliente.tdr.checked==false) {
+					alert("acepte los terminos y condiciones para continuar");
+					return false;
+				}
+				return true;
+			}
+		</script>
 	</head>
 	<body style="background-color:#4CDE35">
 		<form action="ingresa2.php" onsubmit="return Validar(this)" method="post">
