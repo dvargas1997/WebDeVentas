@@ -41,42 +41,68 @@
     font-size: 40px;
 
     }
-   nav{
-    background-color: 
-    width: 100%;
-    height: 20%;
-    font-family: 'Playfair Display SC', serif;
-    font-family: 'Handlee', cursive;
-    font-family: 'Gochi Hand', cursive;
-    font-family: 'Copse', serif;
-}
-   
+ 
    
 
    
    footer{
-    background-color: black;
+    background-color: #202020;
     width: 100%;
     color: #fff;
-   }
-      
+    max-width: 1200px;
+    margin: auto;
+   } 
+   .container-footer{
+    display: flex;
 
+   }
+   .columna1{
+    width: 400px;
+    padding-top: 10px;
+      
+   }
+   .columna1 h1{
+    font-size: 22px;
+   }
+   .columna1 p{
+    font-size: 12px;
+    color: #c7c7c7;
+   }
+   .columna2{
+    width: 400px;
+    max-width: 400px;
+    padding-top: 10px;
+   }
+   .columna2 h1{
+    font-size: 22px;
+
+   }
+   .columna2 .row{
+    margin-top: 10px;
+    display: flex;
+    color: #c7c7c7;
+   }
+   .columna2 .row img{
+    width: 35px;
+    height: 36px;
+    color: #ffff;
+
+   }
+   .columna2 .row label{
     
+    margin: 8px 10px;
+
    }
-  
+   .columna3{
+    padding-top: 10px; 
+    width: 400px;
    }
-   h1{
-    margin:  0px;
+   .columna3 h1{
+    font-size: 22px;
+
    }
-   #contacto{
-    margin-top: 0px;
-   }
-   #contacto li{
-    list-style:none;
-   }
-   p{
-    font-size: 30px;
-    text-align: left;
+   .columna1, .columna2, .columna3{
+      margin-left: 15px;
    }
 
    .ex2{
@@ -90,8 +116,8 @@
 
     .ex2 img{
       
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     padding: 30px;
 
     -webkit-transition: all 0.5s ease;
@@ -100,7 +126,7 @@
     transition: all 0.5s ease;
     }
     .ex2 img:hover {
-    height: 120px;
-    width: 120px;
+    height: 220px;
+    width: 220px;
     
     }
