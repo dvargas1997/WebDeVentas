@@ -6,7 +6,8 @@
 	box-sizing: border-box;
 }
 body{
-	background: url(../img/fondo.jpg);
+	/*background: url(../img/fondo.jpg);*/
+	background: #18A7E2;
 	--webkit-background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;
