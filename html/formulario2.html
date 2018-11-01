@@ -35,22 +35,60 @@
 			}
 		</script>
 	</head>
+         <div class="contenedor">
+		  	<form class="form" action="ingresa2.php" onsubmit="return Validar(this)" method="post">
+				
+					
+						<div class="form-header">
+							
+							<h1>Registro</h1>
+							
+							<div class="container-sub">
+								
+								<p class="sub-form">Completa tus datos Personales</p><p class="sub-form2"> * campos obligatorios</p>
 
-		<form action="ingresa2.php" onsubmit="return Validar(this)" method="post">
-			<fieldset>
-				<legend>Datos Personales</legend>
+							</div>
+							
+							<label for="nom" class = "form-label">*Nombre</label> 
+							<input class="form-input" type="text" id="nom" name="nom" placeholder="Nombre">
+							<label for="ape" class = "form-label">*Apellido Paterno </label> 
+							<input class="form-input" type="text" id="ape" name="ape" placeholder="Apellido Paterno">
 
-				<label for="nom">*Nombre</label> <input type="text" id="nom" name="nom" placeholder="Nombre">
-				<label for="ape">*Apellido</label> <input type="text" id="ape" name="ape" placeholder="Apellido"><br>
-				<label for="ema">*email</label> <input type="email" name="ema" id="ema" placeholder="ejemplo@ejemplo.com">
-				<label for="cue">*Nro. Telefono</label> <input type="number" id="cue" name="cue" placeholder="912345678"><br>
-				Sexo <input type="radio" name="sex" id="sexM"> M
-					 <input type="radio" name="sex" id="sexF"> F<br>
-			</fieldset>
-			<input type="checkbox" id="tdr" name="tdr">
-			<label for="tdr">*Acepto los Términos</label><br>
-			<p> * = Campos obligatorios.</p>
-			<input type="submit">
-		</form>		      
+							<label for="ape" class = "form-label">*Apellido Materno </label> 
+							<input class="form-input" type="text" id="ape" name="ape" placeholder="Apellido Materno">
+							
+							<label for="ema" class = "form-label">*email</label> 
+							<input class="form-input" type="email" name="ema" id="ema" placeholder="ejemplo@ejemplo.com">
+							
+							<label for="cue" class = "form-label">*Nro. Telefono</label> 
+							<input class="form-input" type="number" id="cue" name="cue" placeholder="912345678">
+
+							<label for="pass" class = "form-label">*Contraseña</label> 
+							<input class="form-input	" type="password" id="pass" name="pass" placeholder="*******">
+
+							<label for="rpass" class = "form-label">* Confirma Contraseña</label> 
+							<input class="form-input	" type="password" id="rpass" name="rpass" placeholder="*******">
+						
+						</div>
+
+						<div class="radio">
+								<p>Genero</p>
+								
+								<input class="form-radio" type="radio" name="sex" id="sexM"><label for="sexM" class="radio-label">M</label>
+								
+								<input class="form-radio" type="radio" name="sex" id="sexF"><label for="sexF" class="radio-label">F</label>
+						</div>
+
+						<input class="check" type="checkbox" id="tdr" name="tdr">
+						<label for="tdr" class="check-label">*Acepto los Términos</label><br>
+								
+
+				
+				
+				
+				<input type="submit" class = "submit-btn" value="GUARDAR">
+		
+			 </form>	
+		</div>	      
 	</body>
 </html>
