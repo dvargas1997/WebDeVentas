@@ -10,37 +10,40 @@
     
    }
    
-   .header .container-log {
+.header .menu{
  
 
-    
+    display: flex;
     background: rgba(75,229,252,.5);
     background: #4BE5FC
     width: 100%;
     height: 60px;
-    margin:auto;
-    
     margin-top: 5px;
     padding-bottom: 30px;
 
     }
-   .header .container-log .form-log{
-    text-align: right;
-    padding: 10px 10px;
-    margin-top: 10px;
-
-   }
-   .header .container-log .form-log .form-label{
-
-      color:#ffff;
-   }
-    .header p{
+  
+   
+    .header .menu p , .menu .login{
     
     font-family: fantasy;
     text-align:center;
-    font-size: 40px;
+    font-size: 20x;
+        margin: auto;
+        
 
     }
+.header .menu .login{
+    display: block;
+    max-width: 70px;
+    font-size: 15px;
+    
+}
+    .header h1{
+    font-family: fantasy;
+    text-align:center;
+    font-size: 40px;
+ }
  
    
 
