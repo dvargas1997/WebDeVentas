@@ -8,6 +8,7 @@ body{
  background: #DEDEDE;
  min-height: 100%;
  margin-top: 50px;
+     background: lightblue;
 }
 .login{
     margin: auto;
