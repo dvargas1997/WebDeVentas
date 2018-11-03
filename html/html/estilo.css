@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+body{
+ background: #DEDEDE;
+ min-height: 100%;
+ margin-top: 50px;
+     background: lightblue;
+}
+.login{
+    margin: auto;
+    width: 50%;
+    max-width: 500px;
+    background: #f3f3f3;
+    padding: 100px;
+    border: 1px solid rgba(0,0,0,0.2);
+    
+}
+.login h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(0,0,0,0.7);
+    
+}
+
+.login input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 30px 0px;
+    font-size: 20px;
+}
+.login .enviar{
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(#FFDA63,#FFB940);
+}
+.login .enviar:hover {
+    opacity: 1;
+    background: orange;
+}
+.login .enviar:active {
+    transform: scale(0.95);
+    
+}
+@media (max-width:768px){
+    .login{
+        width: 75%;
+    }
+    
+}
+@media (max-width:480px){
+    .login{
+        width: 95%;
+    }
+    
+}
