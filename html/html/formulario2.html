@@ -12,9 +12,14 @@
 					RegistroCliente.nom.focus();
 					return false;
 				}
-				if(RegistroCliente.ape.value=="") {
-					alert("El Apellido no puede estar vacío")
-					RegistroCliente.ape.focus();
+				if(RegistroCliente.apep.value=="") {
+					alert("El Apellido paterno no puede estar vacío")
+					RegistroCliente.apep.focus();
+					return false;
+				}
+				if(RegistroCliente.apem.value=="") {
+					alert("El Apellido materno no puede estar vacío")
+					RegistroCliente.apem.focus();
 					return false;
 				}
 				if(RegistroCliente.ema.value=="") {
@@ -27,10 +32,21 @@
 					RegistroCliente.cue.focus();
 					return false;
 				}
+				if(RegistroCliente.pass.value=="") {
+					alert("La contraseña no puede estar vacía")
+					RegistroCliente.pass.focus();
+					return false;
+				}
+				if(RegistroCliente.rpass.value=="") {
+					alert("Vuelva a confirmar la contraseña")
+					RegistroCliente.rpass.focus();
+					return false;
+				}
 				if(RegistroCliente.tdr.checked==false) {
 					alert("acepte los terminos y condiciones para continuar");
 					return false;
 				}
+				
 				return true;
 			}
 		</script>
@@ -52,10 +68,10 @@
 							<label for="nom" class = "form-label">*Nombre</label> 
 							<input class="form-input" type="text" id="nom" name="nom" placeholder="Nombre">
 							<label for="ape" class = "form-label">*Apellido Paterno </label> 
-							<input class="form-input" type="text" id="ape" name="ape" placeholder="Apellido Paterno">
+							<input class="form-input" type="text" id="apep" name="apep" placeholder="Apellido Paterno">
 
 							<label for="ape" class = "form-label">*Apellido Materno </label> 
-							<input class="form-input" type="text" id="ape" name="ape" placeholder="Apellido Materno">
+							<input class="form-input" type="text" id="apem" name="apem" placeholder="Apellido Materno">
 							
 							<label for="ema" class = "form-label">*email</label> 
 							<input class="form-input" type="email" name="ema" id="ema" placeholder="ejemplo@ejemplo.com">
