@@ -52,7 +52,7 @@
 		</script>
 	</head>
          <div class="contenedor">
-		  	<form class="form" action="ingresa2.php" onsubmit="return Validar(this)" method="post">
+		  	<form class="form" action="registrar.php" onsubmit="return Validar(this)" method="post">
 				
 					
 						<div class="form-header">
@@ -67,17 +67,18 @@
 							
 							<label for="nom" class = "form-label">*Nombre</label> 
 							<input class="form-input" type="text" id="nom" name="nom" placeholder="Nombre">
-							<label for="ape" class = "form-label">*Apellido Paterno </label> 
-							<input class="form-input" type="text" id="apep" name="apep" placeholder="Apellido Paterno">
-
-							<label for="ape" class = "form-label">*Apellido Materno </label> 
-							<input class="form-input" type="text" id="apem" name="apem" placeholder="Apellido Materno">
+							
+							<label for="ape" class = "form-label">*Apellido</label> 
+							<input class="form-input" type="text" id="apem" name="ape" placeholder="Apellido">
 							
 							<label for="ema" class = "form-label">*email</label> 
 							<input class="form-input" type="email" name="ema" id="ema" placeholder="ejemplo@ejemplo.com">
 							
+							<label for="usu" class = "form-label">*usuario</label> 
+							<input class="form-input" type="text" name="usu" id="usu" placeholder="Usuario">
+							
 							<label for="cue" class = "form-label">*Nro. Telefono</label> 
-							<input class="form-input" type="number" id="cue" name="cue" placeholder="912345678">
+							<input class="form-input" type="number" id="tel" name="tel" placeholder="912345678">
 
 							<label for="pass" class = "form-label">*Contraseña</label> 
 							<input class="form-input	" type="password" id="pass" name="pass" placeholder="*******">
