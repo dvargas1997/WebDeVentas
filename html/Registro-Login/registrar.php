@@ -22,10 +22,4 @@ VALUES ('$nombre','$apellido','$usuario',MD5('$pass'), '$email','$tele');");
     
     $rs= mysqli_query($conexion,$consulta);
 	
-         
-
-        
-
-	
-	
-	
+?>
