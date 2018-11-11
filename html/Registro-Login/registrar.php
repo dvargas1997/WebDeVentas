@@ -25,10 +25,4 @@ VALUES ('$nombre','$apellido','$usuario',MD5('$pass'), '$email','$tele');");
     
     header("location:../index.html");
 	
-         
-
-        
-
-	
-	
-	
+?>
