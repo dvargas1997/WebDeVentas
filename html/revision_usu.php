@@ -1,29 +1,24 @@
+<?php
+include_once("conecta_prod.php");
+$consulta = laconsulta();
+?>
 <!DOCTYPE html>
-<html len="es">
- <head>
-  <title>+Kotitas</title>
-  <meta charset="UTF-8"/>
- 
-    <link href="https://fonts.googleapis.com/css?family=Copse|Gochi+Hand|Handlee|Playfair+Display+SC" rel="stylesheet">
-  
-  <link rel="stylesheet" href="Style/estiloindex.css">
-
-
-
-   
-
- </head>
- <body>
-  <header>
-                <br>
-                <br>
-                <br>
-          <h1>+kotitas</h1>
-
-  
-        </header>
-  <nav> 
-  <ul class="navegación">
+<html leng="es">
+	<head>
+		<title>index</title>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Copse|Gochi+Hand|Handlee|Playfair+Display+SC" rel="stylesheet">
+		<link rel="stylesheet" href="Style/estiloindex.css">
+	</head>
+	<body>
+		<header>
+			<br>
+			<br>
+			<br>
+			<h1>+kotitas</h1>
+		</header>
+	<nav>
+    <ul class="navegación">
        <ul class="menu" >
          <li><a href="index.html">Nosotros</a></li>
          <li><a href="#">Productos</a>
@@ -54,46 +49,39 @@
        </li>
 
          <li><a href="#">Contacto</a></li>
-         <li><a href="Registro-Login/formulario2.html">Crear Cuenta</a></li>
-     <li><a href="Registro-Login/formulario.html">Iniciar Sesión</a></li>
+		 <li><a href="Registro-Login/formulario2.html">Crear Cuenta</a></li>
+		 <li><a href="Registro-Login/formulario.html">Iniciar Sesión</a></li>
         </nav>
-  <section>
+	<section>
+		<div class="row">
+			<div class="col-xs-12">
+			<h3>Lista base de datos</h3>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th width="250">Producto</th>
+							<th width="200">Precio</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+						while($persona = $consulta->fetch_assoc())
+						{
+						?>
+						<tr>
+							<td><?php echo $persona["producto"]; ?></td>
+							<td><?php echo $persona["precio"]; ?></td>
+						</tr>
+						<?php
+						}
+						?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+	<footer>
 
-
- 
-  
-   <strong> Collar Brillante , de material de cuerina resistente pero con estilo , el collar brinck hara que tu perra luzca una bella princesa gracias a su diseño de moño con diamante delicado pero firme . </strong>
-  <br>
-  <br>
-  <br>
-   <div id="container">
-   <div class="ex2">
-    <center>
-   <img src="img/s.jpg"width="250" height="250">
- </center>
-
-  
-   <br>
-  <br>
-  <br> <br>
-  <br>
-  <br>
-   <strong><p>Material:Cuerina</strong></p>
-   <strong><p>Medidas: Ancho: 1,10 cm  , largo: 19 cm  </strong></p>
-   <strong><p>colores: rosado ,azul, negro, rojo </strong></p>
-  <br>
-  <br>
-  <br>
-     <button style = ' text-align:right ; top: -1.3em;' ><a href="accesorioperro.html">VOLVER</button></a>
-       <button style = 'text-align:left; position: left; top: -1.5em;' ><a href="carrito.html">COMPRAR</button></a>
-  <br>
-  <p></p>
-  <br>
-                             
-         </form>
-  <font size="8"></font>
-  </section>
-  <footer>
     <div class="container-footer">
       
       <div class="columna1">
@@ -105,19 +93,19 @@
         <h2>Redes Sociales</h2>
         
         <div class="row">
-          <img src="img/fb.png" >
+          <img src="../img/fb.png" >
           <label >Facebook</label>
         </div>
         
         <div class="row">
-          <img src="img/twi.png" >
+          <img src="../img/twi.png" >
           <label >Twitter</label>
         </div>
 
         <div class="row">
-          <img src="img/insta.png" >
+          <img src="../img/insta.png" >
           <label>Instagram</label>
-        </div>     
+        </div>		 
 
       </div>
       
@@ -133,3 +121,4 @@
     </div>
   </footer>
  </body>
+ </html>
