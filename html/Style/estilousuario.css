@@ -152,7 +152,7 @@ h1 {
    p{ font-size: 30px;
     text-align: left;
     color: black;}
-.ex2 img{
+.table img{
 height: 100px;
 width: 100px;
 margin: 50px 0;
@@ -161,7 +161,7 @@ margin: 50px 0;
 -ms-transition: all 2s ease;
 transition: all 2s ease;;
 }
-.ex2 img:hover {
+.table img:hover {
 height: 250px;
 width: 250px;
 margin-left: -30px;
