@@ -1,4 +1,8 @@
-
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 /* BODY */
 body {
  
@@ -21,7 +25,7 @@ top: 0;
   }
 }
    header {
-
+       display: block;
         width: 100%;
         height: 200px;
         font-family: 'Monoton', cursive;
@@ -43,55 +47,34 @@ top: 0;
       text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6);
     }
 
-
-   .navegación{
-     width: 1000px;
-     margin: 10px auto;
-     background-color: rgba(0,0,0,0.2);
-
-   }
-   .navegación ul{
-     list-style: none;
-   }
-   .menu  li {
-     position: relative;
-     display: inline-block;
-   }
-   .menu li a{
-     display: block;
-     padding: 15px 20px;
-     color: orange;
-     font-family: "corbel";
-     text-decoration: none;
-   }
-   .menu li a:hover{
-     color:red;
-     transition: all.3s;
-
-   }
-   /*submenu*/
-   .submenu{
-     position: absolute;
-     background: #333333;
-     width: 120%;
-     visibility: hidden;
-     opacity: 0;
-     transition: opacity 1.5s;
-   }
-   .submenu li a{
-     display: block;
-     margin: auto;
-     padding: 2px 2px;
-     color: #fff;
-     font-family: "corbel";
-     text-decoration: none;
-    
-   }
-  .menu li:hover .submenu{
-     visibility: visible;
-     opacity: 1;
-   }
-
+/*OPCIONES DE MENU*/
+.menu{
+    max-width: 95%;
+    margin: auto;
+    height: 50px;
+    background: #CE852A;
+}
+.menu ul{
+    display: flex;
+    list-style:none;
+    background: #CE852A;
+}
+.menu ul ul{
+    display: none;
+}
+.menu a{
+    display: block;
+    padding: 14px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.menu a:hover{
+    background: rgba(0,0,0,0.3);
+}
+.menu ul li:hover ul{
+    display: block;
+    position: absolute;
+}
    section{
      
        
