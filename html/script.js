@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    
+
 //    $(".divs_items h2").each(function(){
 //        alert($(this).html());
 //    });
-    
+
     $("#ipt_search").keyup(function(){
         var buscado = $(this).val();
         buscado = buscado.toUpperCase();
@@ -18,3 +18,9 @@ $(document).ready(function () {
         });
     });
 });
+(function(){
+    $('.btn-show').on('click', function(){
+        $('.container').toggleClass('show-border');
+        $('.element').toggleClass('show-border');
+    });
+})();
