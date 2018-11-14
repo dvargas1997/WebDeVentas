@@ -1,20 +1,8 @@
-*{
-	margin: 0px;
-	padding: 0px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-body{
-	/*background: url(../img/fondo.jpg);*/
-	background: #91D0ED;
-	--webkit-background-size: cover;
-	background-size: cover;
-	background-attachment: fixed;
-}
+
 /*TITULO DEL FORM*/
 .contenedor .form .form-header .form-title{
-	font-weight: normal;
+	text-align: center;
+    font-weight: normal;
 	font-family: sans-serif;
 	color:#fff;
 	padding: 12px 0px;
@@ -29,7 +17,7 @@ body{
 	max-width: 650px;
 	margin:auto;
 	padding: 10px 40px;
-	margin-top: 30px;
+	margin-top: 1000px;
 	padding-bottom: 30px;
 	border-radius: 50px;
 }
@@ -69,7 +57,7 @@ body{
 	font-family: Roboto;
 	font-size: 25px;
 	outline: none;
-	background: #5B7690;
+
 	border: none;
 	color:#fff;
 	max-height: 50px;
@@ -79,7 +67,7 @@ body{
 	transition: 0.5s;
 	border-radius: 20px;
 }.contenedor .form .btn-submit:hover{
-	background: #799CBE;
+
 	border-radius: 18px;
 
 

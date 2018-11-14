@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>WEBMASTER</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="styles/estilos.css">
-</head>
-<body>
-	<div class="contenedor">	
+
+     
+	
+        <div class="contenedor">	
 		<form action="" class="form">
 			<div class="form-header">
 				<h1 class="form-title">INGRESAR PRODUCTOS</h1>
@@ -28,6 +22,6 @@
 
 
 		</form>
+		
 	</div>
-</body>
-</html>
+	
