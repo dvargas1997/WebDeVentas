@@ -57,7 +57,7 @@
 	font-family: Roboto;
 	font-size: 25px;
 	outline: none;
-    background: blue;
+    background: ;
 	border: none;
 	color:#fff;
 	max-height: 50px;
@@ -66,8 +66,9 @@
 	cursor: pointer;
 	transition: 0.5s;
 	border-radius: 20px;
+    background: #00adf7;
 }.contenedor .form .btn-submit:hover{
-    background: ;
+    background:#0073e7;
 	border-radius: 18px;
 
 
