@@ -1,5 +1,5 @@
 <?php 
-        include '../../conexion.php';
+        include 'conexion.php';
         
         $producto = $_POST["producto"];
         $precio = $_POST["precio"];

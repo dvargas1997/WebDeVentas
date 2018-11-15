@@ -1,5 +1,5 @@
  <div class="contenedor">	
-            <form action="view/modules/agregar.php" class="form" method="post">
+            <form action="model/agregar.php" class="form" method="post">
                 <div class="form-header">
                     <h1 class="form-title">INGRESAR PRODUCTOS</h1>
                 </div>
