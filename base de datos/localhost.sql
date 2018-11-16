@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 15-11-2018 a las 17:12:10
+-- Tiempo de generación: 16-11-2018 a las 19:25:15
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `nro_telefono` varchar(15) NOT NULL,
   `tipo_usuario` varchar(15) NOT NULL,
   PRIMARY KEY (`id_cliente`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Volcado de datos para la tabla `clientes`
@@ -67,7 +67,8 @@ INSERT INTO `clientes` (`id_cliente`, `Nombre_cliente`, `Apellido`, `usuario`, `
 (3, 'lalete', 'niripil', 'lalux', '12354', 'lalitox@gmail.com', '123456', ''),
 (4, 'lalicio', 'delbum', 'dvargas', 'a6bb4faacdff9dcdcb6f6e22bc51eac9', 'diegovargas@gmail.com', '945162712', ''),
 (5, 'lalic', 'delbu', 'dvargas', 'a6bb4faacdff9dcdcb6f6e22bc51eac9', 'diegovargas@gmail.com', '945162712', ''),
-(6, 'nat', 'nov', 'nat', '25f9e794323b453885f5181f1b624d0b', 'nnovoa2017@alu.uct.cl', '168296854', '');
+(6, 'nat', 'nov', 'nat', '25f9e794323b453885f5181f1b624d0b', 'nnovoa2017@alu.uct.cl', '168296854', ''),
+(7, 'macarena', 'gallardo', 'maraquis', '8642955a15967c74a3a871fdecd77a5a', 'maca.maraca@gmail.com', '987654323', '');
 
 -- --------------------------------------------------------
 
@@ -98,18 +99,23 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `precio` varchar(50) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `descripcion` varchar(255) NOT NULL,
+  `seccion` varchar(30) NOT NULL,
   PRIMARY KEY (`id_producto`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id_producto`, `producto`, `precio`, `cantidad`, `descripcion`) VALUES
-(21, 'collar', '231', 23, 'collar muy lindo'),
-(23, 'collar 2', '231', 89, 'asd'),
-(24, 'diego', '89', 98, ''),
-(25, '', '', 0, '');
+INSERT INTO `productos` (`id_producto`, `producto`, `precio`, `cantidad`, `descripcion`, `seccion`) VALUES
+(21, 'collar', '231', 23, 'collar muy lindo', ''),
+(23, 'collar 2', '231', 89, 'asd', ''),
+(24, 'diego', '89', 98, '', ''),
+(25, '', '', 0, '', ''),
+(26, 'plato', '89', 78, '', 'PERROS'),
+(27, 'kk', '23', 5, '', 'PERROS'),
+(28, 'disfras', '32', 9, 'disfras sppider man perro', 'PERROS'),
+(29, 'hola', '9', 8, 'soudasd', 'PERROS');
 
 --
 -- Restricciones para tablas volcadas
