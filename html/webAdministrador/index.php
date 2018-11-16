@@ -6,9 +6,14 @@
 
     
     <link href="https://fonts.googleapis.com/css?family=Copse|Gochi+Hand|Handlee|Playfair+Display+SC" rel="stylesheet">
-	<link rel="stylesheet" href="styles/estiloindex.css">
-    <link rel="stylesheet" href="styles/estilos.css">
-     
+	
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme" rel="stylesheet">
+    <meta name ="viewport" content="width=width-device, initial-scale=1">
+    
+    
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="styles/estiloindex.css" rel="stylesheet">
        
  </head>
  <body>
@@ -46,9 +51,106 @@
     </header>
 
    <section>
+           <!---- FORMULARIO BUENNOO -->
+           
+            <div class="container">
+			<div class="row">
+				<h3 style="text-align:center">NUEVO REGISTRO</h3>
+			</div>
+			
+			<form class="form-horizontal" method="POST" action="insertar.php" autocomplete="off">
+				<div class="form-group">
+					<label for="producto" class="col-sm-2 control-label">NOMBRE PRODUCTO</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="producto" name="producto" placeholder="producto" required>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="precio" class="col-sm-2 control-label">PRECIO</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="precio" name="precio" placeholder="Precio" required>
+					</div>
+				</div>
+				
+				
+				<div class="form-group">
+					<label for="cantidad" class="col-sm-2 control-label">Cantidad</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="cantidad">
+					</div>
+				</div>
+				
+				
+				
+				<div class="form-group">
+					<label for="SECCION" class="col-sm-2 control-label">SECCION</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="SECCION" name="SECCION">
+							<option value="PERROS">PERROS</option>
+							<option value="GATOS">GATOS</option>
+							<option value="ROEDORES">ROEDORES</option>
+							<option value="AVES">AVES</option>
+							<option value=""></option>
+							<option value="EXOTICOS">EXOTICOS</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+				    <label for="DESCRIPCION" class="col-sm-2 control-label" >DESCRIPCION</label><br>
+                    <TEXTAREA id="DESCRIPCION" class="form-control" name ="descripcion" placeholder="DESCRIPCION DEL PRODUCTO"></TEXTAREA>
+				</div>
+				
+				<!---
+				<div class="form-group">
+					<label for="hijos" class="col-sm-2 control-label">¿?</label>
+					
+					<div class="col-sm-10">
+						<label class="radio-inline">
+							<input type="radio" id="hijos" name="hijos" value="1" checked> SI
+						</label>
+						
+						<label class="radio-inline">
+							<input type="radio" id="hijos" name="hijos" value="0"> NO
+						</label>
+					</div>
+				</div>
+				-->
+				<!---
+				<div class="form-group">
+					<label for="intereses" class="col-sm-2 control-label">INTERESES</label>
+					
+					<div class="col-sm-10">
+						<label class="checkbox-inline">
+							<input type="checkbox" id="intereses[]" name="intereses[]" value="Libros"> Libros
+						</label>
+						
+						<label class="checkbox-inline">
+							<input type="checkbox" id="intereses[]" name="intereses[]" value="Musica"> Musica
+						</label>
+						
+						<label class="checkbox-inline">
+							<input type="checkbox" id="intereses[]" name="intereses[]" value="Deportes"> Deportes
+						</label>
+						
+						<label class="checkbox-inline">
+							<input type="checkbox" id="intereses[]" name="intereses[]" value="Otros"> Otros
+						</label>
+					</div>
+				</div>
+				-->
+				
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<a href="index.php" class="btn btn-default">Regresar</a>
+						<button type="submit" class="btn btn-primary">Guardar</button>
+					</div>
+				</div>
+			</form>
+		</div>
             <!------------------------------------------------------------->
             <!-----------------------Agregar producto --------------------->
-            <!------------------------------------------------------------->
+            <!--
             <div class="contenedor">	
             <form action="insertar.php" class="form" method="post">
                 <div class="form-header">
@@ -68,13 +170,19 @@
 
                 <input type="submit" class="btn-submit" value="AGREGAR PRODUCTO"> 
             </form>
-		</div>
-
+		</div> -->
+        
 	    <!------------------------------------------------------------->
         <!------------------------------------------------------------->
         <!---                    MOSTRAR DATOS                     ---->
         <!------------------------------------------------------------->
         <!------------------------------------------------------------->
+        
+        <?php 
+            
+            
+       
+       ?>
   
   </section>
 

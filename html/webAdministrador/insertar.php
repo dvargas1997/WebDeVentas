@@ -5,8 +5,9 @@
     $precio = $_POST["precio"];
     $cantidad = $_POST["cantidad"];
     $descripcion = $_POST["descripcion"];
+    $seccion = $_POST["SECCION"];
 
-    $sql = "INSERT INTO productos (producto , precio , cantidad, descripcion) VALUES ('$producto', '$precio', '$cantidad', '$descripcion')";
+    $sql = "INSERT INTO productos (producto , precio , cantidad, descripcion, seccion) VALUES ('$producto', '$precio', '$cantidad', '$descripcion','$seccion')";
 
     $verificar_producto = mysqli_query($conexion, "SELECT * FROM productos WHERE producto = '$producto';");
     
