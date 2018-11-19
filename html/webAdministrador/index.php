@@ -25,7 +25,7 @@
             <li><a href="#" class="submenu">Gestion de Productos</a>
                  <ul>
                      <li><a href="index.php?action=productos">Agregar Productos</a></li>
-                     <li><a href="#">Eliminar Producto</a></li>
+                     <li><a href="mostrarprductos.php">Eliminar Producto</a></li>
                      <li><a href="#">Buscar Producto</a></li>
                  </ul>
             </li>
@@ -112,6 +112,11 @@
 				</div>
 			</form>
 		</div>
+           
+           <?php 
+                include 'mostrarprductos.php'
+       
+            ?>
             <!------------------------------------------------------------->
             <!-----------------------Agregar producto --------------------->
             <!--
