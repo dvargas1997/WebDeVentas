@@ -1,14 +1,11 @@
 body {
-    margin: 30px;
+    margin: 50px;
     width: 100%;
     height: 1000px;
-
-
         background-image:url( ../img/fondo.jpg);
    }url(https://fonts.googleapis.com/css?family=Erica+One);
 /* BODY */
 body {
-
   top: 0;
   left: 0;
   right: 0;
@@ -28,7 +25,7 @@ body {
 h1 {
   cursor: default;
   position: absolute;
-  top: 50px;
+  top: 10px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -63,6 +60,7 @@ h1 {
 
     width: 100%;
     height: 10%;
+    top: 10px;
     font-family: 'Playfair Display SC', serif;
     font-family: 'Handlee', cursive;
     font-family: 'Gochi Hand', cursive;
@@ -132,13 +130,57 @@ h1 {
 
    }
    #contenedor{
-     background: #def5f8;
+     background:white ;
      height: 1070px;
      width: 950px;
      margin-right: auto;
      margin-left: auto;
    }
 
+   #Noticias #Izquierda{
+     height: 420px;
+     width: 475px;
+     background:#cd6155 ;
+     float: inherit;
+     display: inline-block;
+   }
+   h6{
+     font-size: 20px;
+     font-family: corbel;
+     color: black;
+   }
+   h7{
+     font-size: 12px;
+     font-family: corbel;
+     color:  #1c2833 ;
+
+   }
+  #Noticias #Centro{
+    background: #f5b041   ;
+    height: 420px;
+    width: 475px;
+    display: inline-block;
+    float: right;
+  }
+  h8{
+    font-size: 20px;
+    font-family: corbel;
+    color: black;
+  }
+  h9{
+    font-size: 12px;
+    font-family: corbel;
+    color:  #1c2833 ;
+  }
+  }*/
+  #novedades{
+
+     }
+h5{
+  font-size: 44px;
+  font-family: corbel;
+  color: ;
+}
 
    // Layout Mixin
 
