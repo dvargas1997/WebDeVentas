@@ -71,7 +71,7 @@ h1 {
    .navegación{
      width: 1000px;
      margin: 10px auto;
-     background-color: white;
+     background-color: #639aa0;
 
    }
    .navegación ul{
@@ -84,7 +84,7 @@ h1 {
    .menu >li>a{
      display: block;
      padding: 15px 20px;
-     color: orange;
+     color: white;
      font-family: "corbel";
      text-decoration: none;
    }
