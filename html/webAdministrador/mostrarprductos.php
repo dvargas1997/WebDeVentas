@@ -27,7 +27,7 @@
                 <td><?php echo $mostrar['precio']; ?></td>
                 <td><?php echo $mostrar['cantidad']; ?></td>
                 <td><?php echo $mostrar['seccion']; ?></td>
-                <td> <img src="data:image/jpg;base64,<?php echo base64_encode($mostrar['imagenes']); ?>"/> </td>
+                <td> <img width="100px" height="100px;" src="data:image/jpg;base64,<?php echo base64_encode($mostrar['imagenes']); ?>"/> </td>
 
             </tr>
             <?php } ?>

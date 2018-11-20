@@ -19,15 +19,12 @@
 					</div>
 				</div>
 				
-				
 				<div class="form-group">
 					<label for="cantidad" class="col-sm-2 control-label">Cantidad</label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="cantidad">
 					</div>
 				</div>
-				
-				
 				
 				<div class="form-group">
 					<label for="SECCION" class="col-sm-2 control-label">SECCION</label>
@@ -41,6 +38,7 @@
 						</select>
 					</div>
 				</div>
+				
 				<div class="form-group">
 				    <label for="DESCRIPCION" class="col-sm-2 control-label" >DESCRIPCION</label><br>
                     <TEXTAREA id="DESCRIPCION" class="form-control" name ="descripcion" placeholder="DESCRIPCION DEL PRODUCTO"></TEXTAREA>
@@ -48,11 +46,8 @@
 				
 		       <div class="form-group">
 		           <input type="file" name="imagen"> 
-		           
 		       </div>
 		       
-	
-				
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 						<a href="index.php" class="btn btn-default">Regresar</a>
