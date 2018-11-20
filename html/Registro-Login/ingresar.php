@@ -22,7 +22,9 @@
 	$fila= mysqli_num_rows($rs);
     
     if ($fila>0){
-        header("location:../index.html");
+        session_start();
+		$_SESSION['user'] = $nombre;
+		header("location:../index2.html");
     }
     else{
         echo "error en la autentificacion";

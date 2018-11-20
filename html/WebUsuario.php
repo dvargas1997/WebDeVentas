@@ -53,7 +53,7 @@
 		 <li><a href="#">Cerrar Sesión</a></li>
         </nav>
  
-   <section>
+   <section id = "contenedor">
 <?php
   $host = "localhost";
   $user = "root";
@@ -64,19 +64,34 @@
 //  mysqli_select_db($db,$con) or die (" no se encontro la base de datos");
     $query = "SELECT * FROM  productos";
     $resultado = mysqli_query($con, $query);
+ 
+    echo "<table >
+            <tr> <td>";
+      $cf= 0;
+
     while ( $fila = mysqli_fetch_array($resultado)) {
+     
    echo "<left>";
-    echo "$fila[producto] ";
+
+    echo "<br>$fila[producto] <br>";
     echo "<img src='.imagenes/$fila[imagenes]''>";
       echo "</left>";
        echo "<left>";
-    echo "$fila[precio] <br><br>";
+    echo "<br>$fila[precio] <br><br>";
      echo "</left>";
+
   echo "<left>";
   echo "DESCRIPCION <br>";
-    echo "$fila[descripcion]<br><br><br>";
+    echo "$fila[descripcion]<br>";
     echo "</left>";
+     $cf++;
+    if ($cf==7) {
+    echo "</td>";
+    echo "<td>";
+    }
+    
   }
+  echo "</td></tr></table>";
 
 
 ?>
