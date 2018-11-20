@@ -37,8 +37,14 @@ session_start();
 	$fila= mysqli_num_rows($rs);
     
     if ($fila>0){
+<<<<<<< HEAD
 		$_SESSION['user'] = $nombre;
 		header("location:../index2.php");
+=======
+        session_start();
+		$_SESSION['user'] = $nombre;
+		header("location:../index2.html");
+>>>>>>> develop
     }
     else{
         echo "error en la autentificacion";
