@@ -6,11 +6,18 @@
     $cantidad = $_POST["cantidad"];
     $descripcion = $_POST["descripcion"];
     $seccion = $_POST["SECCION"];
+    
+    // variables de la img
+    $nameimg = $_FILES['imagen']['name'];
+    $typeimg = $_FILES['imagen']['type'];
+    $img = file_get_contents($_FILE['imagen']['tmp_name']);
 
-    $sql = "INSERT INTO productos (producto , precio , cantidad, descripcion, seccion) VALUES ('$producto', '$precio', '$cantidad', '$descripcion','$seccion')";
+
+    $sql = "INSERT INTO productos (producto , precio , cantidad, descripcion, seccion, imagenes) VALUES ('$producto', '$precio', '$cantidad', '$descripcion','$seccion','$nameimg','$typeimg','$img')";
 
     $verificar_producto = mysqli_query($conexion, "SELECT * FROM productos WHERE producto = '$producto';");
-    
+     
+ 
     if(mysqli_num_rows($verificar_producto) > 0 ){
         
         //include 'alerta.php';
@@ -32,7 +39,7 @@
        
         echo '<script languaje = "javascript">
                 alert("Producto Registrado");
-                window.history.go(-1);
+                /window.history.go(-1);
               </script>';
         
     }

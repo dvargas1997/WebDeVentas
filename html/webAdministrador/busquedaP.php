@@ -10,13 +10,17 @@
               <th>PRECIO</th>
               <th>STOCK</th>
               <th>SECCIÓN</th>
-              <th>IMAGEN</th>
-
-            </tr>
+         </tr>
             <?php 
-                require_once 'conexion.php';
+                $busqueda = $_REQUEST['busqueda'];
+                if(empty($busqueda)){
+                    echo "<script>
+                            alert('no se encontro la varible busqueda');
+                            window.history.go(-1);
+                        </script>";
+                }
 
-                $sql = "SELECT id_producto, producto, precio, cantidad, seccion, imagenes FROM productos";
+                $sql = "SELECT id_producto, producto, precio, cantidad, seccion FROM productos";
                 $retornosql = mysqli_query($conexion,$sql);
                 while($mostrar = mysqli_fetch_array($retornosql)){
 
@@ -27,7 +31,6 @@
                 <td><?php echo $mostrar['precio']; ?></td>
                 <td><?php echo $mostrar['cantidad']; ?></td>
                 <td><?php echo $mostrar['seccion']; ?></td>
-                <td> <img src="data:image/jpg;base64,<?php echo base64_encode($mostrar['imagenes']); ?>"/> </td>
 
             </tr>
             <?php } ?>

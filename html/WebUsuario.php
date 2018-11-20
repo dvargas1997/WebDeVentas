@@ -67,7 +67,7 @@
     while ( $fila = mysqli_fetch_array($resultado)) {
    echo "<left>";
     echo "$fila[producto] ";
-    echo "<img src='.imagenes/$fila[Nom_img]''>";
+    echo "<img src='.imagenes/$fila[imagenes]''>";
       echo "</left>";
        echo "<left>";
     echo "$fila[precio] <br><br>";
