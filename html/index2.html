@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(@!$_SESSION['user']){
+	header("location:index.html");
+}
+?>
 <!DOCTYPE html>
 <html len="es">
  <head>
@@ -49,8 +55,8 @@
          </li>
 </ul>
        </li>
-		 <li><a href="Registro-Login/formulario2.html">Crear Cuenta</a></li>
-		 <li><a href="Registro-Login/formulario.html">Iniciar Sesión</a></li>
+		 <li><a href="">Registro Mascotas</a></li>
+		 <li><a href="Registro-Login/cerrarsesion.php">Cerrar Sesión</a></li>
         </nav>
 
      <section id="contenedor">
