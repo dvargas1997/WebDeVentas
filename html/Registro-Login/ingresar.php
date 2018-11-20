@@ -1,4 +1,5 @@
 <?php
+session_start();
 	$usuario = "root";
 	$password = "";
 	$servidor = "localhost";
@@ -14,19 +15,38 @@
 	
 
         
-	$consulta = ("SELECT usuario FROM clientes WHERE usuario='$nombre' AND contrasena='$passmd5'");
+	$consulta = ("SELECT * FROM clientes WHERE usuario='$nombre' AND contrasena='$passmd5'");
+	$consulta2 = ("SELECT * FROM clientes WHERE usuario='$nombre' AND contrasena='$passmd5' AND tipo_usuario='gerente'");
+	$consulta3 = ("SELECT * FROM clientes WHERE usuario='$nombre' AND contrasena='$passmd5' AND tipo_usuario='admin'");
     
-    
-    
-    $rs= mysqli_query($conexion,$consulta);
+    $rs2= mysqli_query($conexion,$consulta2);
+	$fila2= mysqli_num_rows($rs2);
+	if ($fila2>0){
+		$_SESSION['user'] = $nombre;
+		header("location:../webGerente/indexGerente.html");
+    }		
+    else{
+	$rs3= mysqli_query($conexion,$consulta3);
+	$fila3= mysqli_num_rows($rs3);
+	if ($fila3>0){
+		$_SESSION['user'] = $nombre;
+		header("location:../webAdministrador/index.php");
+    }		
+    else{
+	$rs= mysqli_query($conexion,$consulta);
 	$fila= mysqli_num_rows($rs);
     
     if ($fila>0){
+<<<<<<< HEAD
+		$_SESSION['user'] = $nombre;
+		header("location:../index2.php");
+=======
         session_start();
 		$_SESSION['user'] = $nombre;
 		header("location:../index2.html");
+>>>>>>> develop
     }
     else{
         echo "error en la autentificacion";
-    }   
+    }
 ?>

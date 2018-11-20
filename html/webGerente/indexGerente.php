@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(@!$_SESSION['user']){
+	header("location:../index.html");
+}
+?>
 <!DOCTYPE html>
 <html leng="es">
 	<head>
@@ -20,8 +26,10 @@
 				<ul class="submenu">
 					<li><a href="revision.php">Revisar Precio</a></li>
 					<li><a href="revision.php">Revisar Cantidad</a></li>
-					<li><a href="revision.php">Revisar Usuarios</a></li>
+					<li><a href="revision.php">Revisar Usuarios</a></li>				
 				</ul>
+				<li><a href="../Registro-Login/cerrarsesion.php">Cerrar Sesion</a>
+				</li>
 			</ul>
 		</ul>
 	</nav>
