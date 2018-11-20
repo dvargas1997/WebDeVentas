@@ -53,7 +53,7 @@
 		 <li><a href="#">Cerrar Sesión</a></li>
         </nav>
  
-   <section>
+   <section id = "contenedor">
 <?php
   $host = "localhost";
   $user = "root";
