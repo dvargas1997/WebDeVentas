@@ -108,15 +108,16 @@ CREATE TABLE IF NOT EXISTS `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `producto`, `precio`, `cantidad`, `descripcion`, `seccion`) VALUES
-(21, 'collar', '231', 23, 'collar muy lindo', ''),
-(23, 'collar 2', '231', 89, 'asd', ''),
-(24, 'diego', '89', 98, '', ''),
-(25, '', '', 0, '', ''),
-(26, 'plato', '89', 78, '', 'PERROS'),
-(27, 'kk', '23', 5, '', 'PERROS'),
-(28, 'disfras', '32', 9, 'disfras sppider man perro', 'PERROS'),
-(29, 'hola', '9', 8, 'soudasd', 'PERROS');
-
+(1, 'COLLAR LED PARA PERROS', '$ 2.310', 8, 'collar luminoso ideal para las salidas  nocturnas o carreteras ', 'PERROS'),
+(2, 'POLERA ADIDOG', '$ 1.800', 10, 'Polera Adidog , exclusiva de marca \'ADIDAS\'', 'PERROS'),
+(3, 'COLLAR ANTILADRIDO', '$3.000', 30, 'Collar antiladrido posee una descarga de energia que hara facil el control de tu mascota.', 'PERRO'),
+(4, 'BOTELLA PARA VIAJE', '$ 700', 40, 'Botella para viajes , ideal para esos momentos donde sales de paseo con tu mascota ', 'GATOS'),
+(5, 'DISFRAZ', '$ 3.200', 90, 'Disfraz sppiderman para perro', 'PERROS'),
+(6, 'CAMA FLEX', '$5.000', 56, 'Cama Flex gatos , es una cama comoda de material acolchado que hara que tu gato duerma tranquilo.', 'GATOS'),
+(7, 'COLLAR PERRO', '1300', 1, 'Collar , variados colores', 'PERROS'),
+(8, 'CHALECOS SALVAGATOS', '1000', 30, 'chaleco salvavidas  para gato ideal para que tu gato aprenda a enamorarse de el agua', 'GATOS'),
+(9, 'COLLAR GATO CORBATA', '1500', 2, 'Collar felino con un peque&ntildeo detalle de corbata , para que tu macota se vea adorable', 'GATOS');
+COMMIT;
 --
 -- Restricciones para tablas volcadas
 --
