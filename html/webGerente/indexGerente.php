@@ -11,6 +11,7 @@ if(@!$_SESSION['user']){
 		<meta charset="UTF-8">
 		<link href="https://fonts.googleapis.com/css?family=Copse|Gochi+Hand|Handlee|Playfair+Display+SC" rel="stylesheet">
 		<link rel="stylesheet" href="../Style/estilogerente.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	</head>
 	<body>
 		<header>
@@ -22,19 +23,30 @@ if(@!$_SESSION['user']){
 	<nav>
 		<ul class="navegación">
 			<ul class="menu">
-				<li><a href="#">Productos</a>
-				<ul class="submenu">
-					<li><a href="revision.php">Revisar Precio</a></li>
-					<li><a href="revision.php">Revisar Cantidad</a></li>
-					<li><a href="revision.php">Revisar Usuarios</a></li>				
-				</ul>
 				<li><a href="../Registro-Login/cerrarsesion.php">Cerrar Sesion</a>
 				</li>
 			</ul>
 		</ul>
 	</nav>
-	<section>
-	</section>
+	<section class="principal">
+
+
+	<div class="formulario">
+		<label for="caja_busqueda">Buscar</label>
+		<input type="text" name="caja_busqueda" id="caja_busqueda"></input>
+
+		
+	</div>
+
+	<div id="datos"></div>
+	
+	
+</section>
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 	<footer>
 
     <div class="container-footer">
