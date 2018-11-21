@@ -74,7 +74,14 @@
    echo "<left>";
 
     echo "<br>$fila[producto] <br>";
-    echo "<img src='.imagenes/$fila[imagenes]''>";
+//    header('Content-Type: image/jpeg');
+  //  echo base64_encode($fila['imagenes']);
+    //    header('Content-Type: text/html');
+      ?>          
+
+      <img width="100px" height="100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila['imagenes']); ?>"/>
+
+<?php
       echo "</left>";
        echo "<left>";
     echo "<br>$fila[precio] <br><br>";
@@ -95,8 +102,6 @@
 
 
 ?>
-
-
 
   
   </section>
