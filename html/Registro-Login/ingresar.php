@@ -23,7 +23,7 @@ session_start();
 	$fila2= mysqli_num_rows($rs2);
 	if ($fila2>0){
 		$_SESSION['user'] = $nombre;
-		header("location:../webGerente/indexGerente.html");
+		header("location:../webGerente/indexGerente.php");
     }		
     else{
 	$rs3= mysqli_query($conexion,$consulta3);
@@ -37,16 +37,13 @@ session_start();
 	$fila= mysqli_num_rows($rs);
     
     if ($fila>0){
-<<<<<<< HEAD
 		$_SESSION['user'] = $nombre;
 		header("location:../index2.php");
-=======
-        session_start();
-		$_SESSION['user'] = $nombre;
-		header("location:../index2.html");
->>>>>>> develop
+
     }
     else{
         echo "error en la autentificacion";
     }
+  }
+}  
 ?>
