@@ -27,20 +27,20 @@
          <ul class="submenu">
            <li><a href="#">Vestuario</a></li>
            <ul>
-              <li><a href="vestuarioperro.html">Perros</a></li>
-               <li><a href="">Gatos</a></li>
+              <li><a href="lista_seccion.php?seccion=PERROS">Perros</a></li>
+               <li><a href="lista_seccion.php?seccion=GATOS">Gatos</a></li>
                 <li><a href="">otros</a></li>
            </ul>
            <li><a href="#">Accesorios</a></li>
            <ul>
-              <li><a href="accesorioperro.html">Perros</a></li>
-               <li><a href="in.html">Gatos</a></li>
+              <li><a href="lista_seccion.php?seccion=PERROS">Perros</a></li>
+               <li><a href="lista_seccion.php?seccion=GATOS">Gatos</a></li>
                 <li><a href="#">otros</a></li>
            </ul>
            <li><a href="#">Alimentos</a></li>
            <ul>
-              <li><a href="#">Perros</a></li>
-               <li><a href="#">Gatos</a></li>
+              <li><a href="lista_seccion.php?seccion=PERROS">Perros</a></li>
+               <li><a href="lista_seccion.php?seccion=GATOS">Gatos</a></li>
                 <li><a href="#">otros</a></li>
 
            </ul>
