@@ -80,7 +80,7 @@
       ?>          
 
       <img width="100px" height="100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila['imagenes']); ?>"/>
-
+     
 <?php
       echo "</left>";
        echo "<left>";
@@ -90,6 +90,8 @@
   echo "<left>";
   echo "DESCRIPCION <br>";
     echo "$fila[descripcion]<br>";
+	    echo "<input type='submit' name='Submit' value='Comprar'/> \n";  
+
     echo "</left>";
      $cf++;
     if ($cf==7) {
