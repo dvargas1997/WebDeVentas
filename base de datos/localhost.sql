@@ -27,6 +27,17 @@ USE `web_de_ventas`;
 --
 -- Estructura de tabla para la tabla `avisos`
 --
+DROP TABLE IF EXISTS `venta_detalle`;
+CREATE TABLE IF NOT EXISTS `venta_detalle` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idventa` int(11) NOT NULL,
+  `idproducto` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `precio` decimal(9,2) NOT NULL,
+  `subtotal` decimal(9,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
 
 CREATE TABLE IF NOT EXISTS `avisos` (
   `id_aviso` int(11) NOT NULL AUTO_INCREMENT,
