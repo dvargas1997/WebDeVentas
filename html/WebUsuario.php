@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(@!$_SESSION['user']){
+	header("location:index.html");
+}
+?>
 <!DOCTYPE html>
 <html len="es">
  <head>

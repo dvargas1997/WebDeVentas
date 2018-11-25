@@ -38,7 +38,7 @@ session_start();
     
     if ($fila>0){
 		$_SESSION['user'] = $nombre;
-		header("location:../index2.php");
+		header("location:../WebUsuario.php");
 
     }
     else{
