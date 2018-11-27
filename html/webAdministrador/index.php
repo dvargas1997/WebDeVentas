@@ -33,7 +33,7 @@
             <li><a href="#" class="submenu">Gestion de Productos</a>
                  <ul>
                      <li><a href="view.php?action='productos'">Agregar Productos</a></li>
-                     </li>
+                     <li><a href="view.php?action='eliminarP">Eliminar Producto</a></li>
                  </ul>
             </li>
             
