@@ -8,8 +8,6 @@
     $seccion = $_POST["SECCION"];
     
     // variables de la img
-    $nameimg = $_FILES['imagen']['name'];
-    $typeimg = $_FILES['imagen']['type'];
     $img = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
 

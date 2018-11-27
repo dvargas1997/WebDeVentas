@@ -42,7 +42,10 @@ session_start();
 
     }
     else{
-        echo "error en la autentificacion";
+         echo '<script languaje = "javascript">
+                alert("Error Al Autenticar"); 
+                window.history.go(-1);
+              </script>';
     }
   }
 }  

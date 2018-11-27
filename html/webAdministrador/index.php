@@ -1,8 +1,8 @@
 <?php
-//session_start();
-//if(@!$_SESSION['user']){
-//	header("location:../index.html");
-//}
+session_start();
+if(@!$_SESSION['user']){
+	header("location:../index.html");
+}
 ?>
 <!DOCTYPE html>
 <html len="es">
@@ -27,7 +27,7 @@
  <body>
   <header>
              
-          <h1 class = "kotitas"></h1>
+          <h1 class = "kotitas">PetWorld</h1>
       <nav class="menu">
         <ul>
             <li><a href="view.php?action='productos'" class="submenu">Gestion de Productos</a>
