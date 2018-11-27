@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html len="es">
  <head>
-  <title>Administracion +Kotitas</title>
+  <title>Administracion </title>
   <meta charset="UTF-8">
 
     
@@ -27,13 +27,13 @@
  <body>
   <header>
              
-          <h1 class = "kotitas">+kotitas</h1>
+          <h1 class = "kotitas"></h1>
       <nav class="menu">
         <ul>
-            <li><a href="#" class="submenu">Gestion de Productos</a>
+            <li><a href="view.php?action='productos'" class="submenu">Gestion de Productos</a>
                  <ul>
-                     <li><a href="view.php?action='productos'">Agregar Productos</a></li>
-                     <li><a href="view.php?action='eliminarP">Eliminar Producto</a></li>
+                     <li><a href="view.php?action='addp'">Agregar Productos</a></li>
+                     <li><a href="view.php?action='eliminarp'">Eliminar Producto</a></li>
                  </ul>
             </li>
             
@@ -67,10 +67,11 @@
         </div>
            
                <?php 
+                //require 'view.php';
                 //formularioinsercion de productos
-                //include 'insertarproductos.php';
+                include 'insertarproductos.php';
                 //tabla mostrar datos productos 
-                //include 'mostrarprductos.php';
+                include 'mostrarprductos.php';
                 //mostrar usuarios
                 include 'MUsuarios.php'
                 ?>
