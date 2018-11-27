@@ -1,4 +1,12 @@
-<?php 
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme" rel="stylesheet">
+    <link rel="stylesheet" href="styles/estiloindex.css" rel="stylesheet">
+    
+    <meta name ="viewport" content="width=width-device, initial-scale=1">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../jquery/jquery-3.3.1.min.js"></script>
+    
+ <?php 
   require_once 'conexion.php';
   
   ?>

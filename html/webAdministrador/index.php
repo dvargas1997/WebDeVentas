@@ -1,8 +1,8 @@
 <?php
-session_start();
-if(@!$_SESSION['user']){
-	header("location:../index.html");
-}
+//session_start();
+//if(@!$_SESSION['user']){
+//	header("location:../index.html");
+//}
 ?>
 <!DOCTYPE html>
 <html len="es">
@@ -32,13 +32,12 @@ if(@!$_SESSION['user']){
         <ul>
             <li><a href="#" class="submenu">Gestion de Productos</a>
                  <ul>
-                     <li><a href="index.php?action=productos">Agregar Productos</a></li>
-                     <li><a href="index.php?action=eliminarP">Eliminar Producto</a></li>
-                     <li><a href="#">Buscar Producto</a></li>
+                     <li><a href="view.php?action='productos'">Agregar Productos</a></li>
+                     </li>
                  </ul>
             </li>
             
-            <li><a href="#"> Gestion Usuarios</a>
+            <li><a href="view.php?action=usuarios"> Gestion Usuarios</a>
                 <ul>
                      <li><a href="#">Gerente</a></li>
                      <li><a href="#">Cliente</a></li>
@@ -60,19 +59,22 @@ if(@!$_SESSION['user']){
 
    <section>
           
-        
-           
-           <?php 
-                //formularioinsercion de productos
-                include 'insertarproductos.php';
-                //tabla mostrar datos productos 
-                include 'mostrarprductos.php';
-       
-            ?>
-            <form action= "busquedaP.php" method="get">
+        <div class="container">
+          <form  action= "busquedaP.php" method="get">
                 <input type="text" name="busqueda" id="busqueda" placeholder="Buscar...">
                 <input type="submit" value="Buscar">
             </form>
+        </div>
+           
+               <?php 
+                //formularioinsercion de productos
+                //include 'insertarproductos.php';
+                //tabla mostrar datos productos 
+                //include 'mostrarprductos.php';
+                //mostrar usuarios
+                include 'MUsuarios.php'
+                ?>
+            
            
   
   </section>
