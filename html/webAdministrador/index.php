@@ -64,24 +64,34 @@ if(@!$_SESSION['user']){
         </div>
            
                <?php 
-                $accion = $_GET['action'];
                 
-                if($accion == 'addp'){
+                
+                  if(!isset($_GET['action'])){
                     
-                    include 'insertarproductos.php';
-                    
-                }elseif($accion == 'eliminarp'){
-                    
-                    include 'mostrarprductos.php';
-                    
-                }elseif($accion == 'usuarios'){
-                    
-                    include 'MUsuarios.php';
-                    
-                }else{
-                    include 'mostrarprductos.php';
-                }
-        
+                      include 'MUsuarios.php';
+                  }
+                      else{
+                        
+                                                                  
+                        $accion = $_GET['action'];
+
+                        if($accion == 'addp'){
+
+                            include 'insertarproductos.php';
+
+                        }elseif($accion == 'eliminarp'){
+
+                            include 'mostrarprductos.php';
+
+                        }elseif($accion == 'usuarios'){
+
+                            include 'MUsuarios.php';
+
+                        }else{
+                            include 'MUsuarios.php';
+                        }
+                  }
+                
         
                 ?>
             
