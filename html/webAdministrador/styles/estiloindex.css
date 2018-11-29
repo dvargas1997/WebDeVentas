@@ -29,11 +29,10 @@ top: 0;
         width: 100%;
         height: 200px;
         font-family: 'Monoton', cursive;
+
        }
    .kotitas {
       cursor: default;
-     
-      top: 50px;
       left: 0;
       right: 0;
       bottom: 0;
@@ -49,15 +48,17 @@ top: 0;
 
 /*OPCIONES DE MENU*/
 .menu{
+    
     max-width: 95%;
     margin: auto;
     height: 50px;
-    background: #CE852A;
+    background: #08adf7;
+    border-radius: 30px;
 }
 .menu ul{
     display: flex;
     list-style:none;
-    background: #CE852A;
+    background: #08adf7;
 }
 .menu ul ul{
     display: none;
@@ -65,7 +66,7 @@ top: 0;
 .menu a{
     display: block;
     padding: 14px 20px;
-    color: #fff;
+    color: #f72929;
     text-decoration: none;
 }
 .menu a:hover{

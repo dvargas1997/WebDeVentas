@@ -1,5 +1,43 @@
-<!DOCTYPE html>
-<html len="es">
+<?php
+session_start();
+
+ 
+ echo "<table border = 1 >
+            <tr> <td>";
+
+$total = 0;
+foreach($_SESSION["shopping_cart"] as $keys => $values)
+{
+?>
+
+<tr>
+  <tr>
+<th width="40%">Descripción</th>
+<th width="10%" class='text-center'>Cantidad</th>
+<th width="20%" class='text-right'>Precio</th>
+<th width="15%" class='text-right'>Total</th>
+<th width="5%"></th>
+</tr>
+ 
+<td><?php echo $values["item_name"]; ?></td>
+<td class='text-center'><?php echo $values["item_quantity"]; ?></td>
+<td class='text-right'>$ <?php echo $values["item_price"]; ?></td>
+<td class='text-right'>$ <?php echo number_format((int)$values["item_quantity"] * $values["item_price"], 3); ?></td>
+<td><a href="carrito.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Eliminar</span></a></td>
+</tr>
+<?php
+$total = $total + ($values["item_quantity"] * $values["item_price"]);
+}
+?>
+<tr>
+<td colspan="3" align="right">Total</td>
+<td align="right">$ <?php echo number_format($total, 3); ?></td>
+<td></td>
+</tr>
+
+
+
+
  <head>
   <title>+Kotitas</title>
   <meta charset="UTF-8"/>
