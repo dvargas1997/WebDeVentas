@@ -1,5 +1,5 @@
 <?php
-session_start();
+ session_start();
 if(@!$_SESSION['user']){
 	header("location:../index.html");
 }
@@ -30,18 +30,15 @@ if(@!$_SESSION['user']){
           <h1 class = "kotitas">PetWorld</h1>
       <nav class="menu">
         <ul>
-            <li><a href="view.php?action='productos'" class="submenu">Gestion de Productos</a>
+            <li><a href="index.php?action=productos" class="submenu">Gestion de Productos</a>
                  <ul>
-                     <li><a href="view.php?action='addp'">Agregar Productos</a></li>
-                     <li><a href="view.php?action='eliminarp'">Eliminar Producto</a></li>
+                     <li><a href="index.php?action=addp">Agregar Productos</a></li>
+                     <li><a href="index.php?action=eliminarp">Ver Productos</a></li>
                  </ul>
             </li>
             
-            <li><a href="view.php?action=usuarios"> Gestion Usuarios</a>
-                <ul>
-                     <li><a href="#">Gerente</a></li>
-                     <li><a href="#">Cliente</a></li>
-                 </ul>
+            <li><a href="index.php?action=usuarios"> Gestion Usuarios</a>
+               
             </li>
             
             <li><a href="#">Gestion Avisos</a>
@@ -67,13 +64,25 @@ if(@!$_SESSION['user']){
         </div>
            
                <?php 
-                //require 'view.php';
-                //formularioinsercion de productos
-                include 'insertarproductos.php';
-                //tabla mostrar datos productos 
-                include 'mostrarprductos.php';
-                //mostrar usuarios
-                include 'MUsuarios.php'
+                $accion = $_GET['action'];
+                
+                if($accion == 'addp'){
+                    
+                    include 'insertarproductos.php';
+                    
+                }elseif($accion == 'eliminarp'){
+                    
+                    include 'mostrarprductos.php';
+                    
+                }elseif($accion == 'usuarios'){
+                    
+                    include 'MUsuarios.php';
+                    
+                }else{
+                    include 'mostrarprductos.php';
+                }
+        
+        
                 ?>
             
            

@@ -3,7 +3,7 @@
   
   ?>
    <div class="container">
-       <form action="">
+      
         <table class="table table-hover table-bordered">
             <tr class="danger">
               <th>ID</th>
@@ -47,5 +47,5 @@
             ?>
             
         </table>
-        </form>
+       
     </div>
