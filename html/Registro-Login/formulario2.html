@@ -4,55 +4,11 @@
 		<title>Registro Cliente</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="formulario_2.css">
-		<script>
-			function Validar(RegistroCliente)
-			{
-				if(RegistroCliente.nom.value=="") {
-					alert("El Nombre no puede estar vacío")
-					RegistroCliente.nom.focus();
-					return false;
-				}
-				if(RegistroCliente.apep.value=="") {
-					alert("El Apellido paterno no puede estar vacío")
-					RegistroCliente.apep.focus();
-					return false;
-				}
-				if(RegistroCliente.apem.value=="") {
-					alert("El Apellido materno no puede estar vacío")
-					RegistroCliente.apem.focus();
-					return false;
-				}
-				if(RegistroCliente.ema.value=="") {
-					alert("ingrese su correo electronico")
-					RegistroCliente.ema.focus();
-					return false;
-				}
-				if(RegistroCliente.cue.value=="") {
-					alert("ingrese su numero de contacto")
-					RegistroCliente.cue.focus();
-					return false;
-				}
-				if(RegistroCliente.pass.value=="") {
-					alert("La contraseña no puede estar vacía")
-					RegistroCliente.pass.focus();
-					return false;
-				}
-				if(RegistroCliente.rpass.value=="") {
-					alert("Vuelva a confirmar la contraseña")
-					RegistroCliente.rpass.focus();
-					return false;
-				}
-				if(RegistroCliente.tdr.checked==false) {
-					alert("acepte los terminos y condiciones para continuar");
-					return false;
-				}
-				
-				return true;
-			}
-		</script>
+		<script src="validar.js"></script>
+			
 	</head>
          <div class="contenedor">
-		  	<form class="form" action="registrar.php" onsubmit="return Validar(this)" method="post">
+		  	<form class="form" action="registrar.php" onsubmit="return Validar()" method="post">
 				
 					
 						<div class="form-header">
@@ -65,37 +21,24 @@
 
 							</div>
 							
-							<label for="nom" class = "form-label">*Nombre</label> 
-							<input class="form-input" type="text" id="nom" name="nom" placeholder="Nombre">
-							
-							<label for="ape" class = "form-label">*Apellido</label> 
-							<input class="form-input" type="text" id="apem" name="ape" placeholder="Apellido">
-							
-							<label for="ema" class = "form-label">*email</label> 
-							<input class="form-input" type="email" name="ema" id="ema" placeholder="ejemplo@ejemplo.com">
-							
-							<label for="usu" class = "form-label">*usuario</label> 
-							<input class="form-input" type="text" name="usu" id="usu" placeholder="Usuario">
-							
-							<label for="cue" class = "form-label">*Nro. Telefono</label> 
-							<input class="form-input" type="number" id="tel" name="tel" placeholder="912345678">
-
-							<label for="pass" class = "form-label">*Contraseña</label> 
-							<input class="form-input	" type="password" id="pass" name="pass" placeholder="*******">
-
-							<label for="rpass" class = "form-label">* Confirma Contraseña</label> 
-							<input class="form-input	" type="password" id="rpass" name="rpass" placeholder="*******">
-						
-						</div>
-
-						<div class="radio">
-								<p>Genero</p>
+								<label for="nom" class = "form-label">*Nombre</label> 
+								<input id="nombre" type="text" name="nombre" placeholder="Nombre" class="form-input" >
 								
-								<input class="form-radio" type="radio" name="sex" id="sexM"><label for="sexM" class="radio-label">M</label>
+								<label for="ape" class = "form-label">*Apellido </label>
+								<input id="apellido" type="text" name="apellido" placeholder="Apellido " class="form-input" >
 								
-								<input class="form-radio" type="radio" name="sex" id="sexF"><label for="sexF" class="radio-label">F</label>
-						</div>
-
+								<label for="ema" class = "form-label">*Email</label>
+								<input id="email" type="email" name="email" placeholder="Correo" class="form-input" >
+								
+								<label for="usu" class = "form-label">*Usuario</label>
+								<input id="usuario" type="text" name="usuario" placeholder="Usuario" class="form-input" >
+								
+								<label for="pass" class = "form-label">*Contraseña</label>
+								<input id="password" type="password" name="contrasena" placeholder="*******" class="form-input" >
+								
+								<label for="cue" class = "form-label">*Telefono</label>
+								<input id="telefono" type="text" name="telefono" placeholder="912321323" class="form-input" >
+							</div>
 						<input class="check" type="checkbox" id="tdr" name="tdr">
 						<label for="tdr" class="check-label">*Acepto los Términos</label><br>
 								

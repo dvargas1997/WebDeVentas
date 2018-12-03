@@ -8,13 +8,12 @@
 	
 	$db = mysqli_select_db( $conexion, $basededatos ) or die ( "no se ha podido conectar a la base de datos" );
 
-	$nombre = $_POST["nom"];
-    $apellido = $_POST["ape"];
-    $usuario =  $_POST["usu"];
-	$pass = $_POST["pass"];
-    
-    $email = $_POST["ema"];
-    $tele = $_POST["tel"];
+	$nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $usuario =  $_POST["usuario"];
+	$pass = $_POST["password"];
+    $email = $_POST["email"];
+    $tele = $_POST["telefono"];
 	
     
 	$consulta = ("INSERT INTO clientes (Nombre_cliente,apellido,usuario, contrasena, e_mail,nro_telefono)
