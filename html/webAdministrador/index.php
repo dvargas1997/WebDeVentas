@@ -1,8 +1,11 @@
 <?php
- session_start();
-if(@!$_SESSION['user']){
-	header("location:../index.html");
-}
+    //session_start();
+    //if(@!$_SESSION['user']){
+    //header("location:../index.html");
+    //}
+
+include 'config/conexion.php';
+  $db = new Conexion();
 ?>
 <!DOCTYPE html>
 <html len="es">

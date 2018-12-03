@@ -1,5 +1,5 @@
 <?php 
-    include 'conexion.php';
+    include 'conifg/conexion.php';
     
     $eliminar = $_GET['eliminar'];
     $editar = $_GET['editar'];

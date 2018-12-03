@@ -1,5 +1,5 @@
 <?php 
-  require_once 'conexion.php';
+  include 'config/conexion.php';
   
   ?>
    <div class="container">
