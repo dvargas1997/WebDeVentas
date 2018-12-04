@@ -10,7 +10,7 @@ session_start();
 	$db = mysqli_select_db( $conexion, $basededatos ) or die ( "no se ha podido conectar a la base de datos" );
 
 	$nombre = $_POST["usuario"];
-	$pass = $_POST["pass"];
+	$pass = $_POST["password"];
     $passmd5= md5($pass);
 	
 
@@ -22,6 +22,9 @@ session_start();
     $rs2= mysqli_query($conexion,$consulta2);
 	$fila2= mysqli_num_rows($rs2);
 	if ($fila2>0){
+		echo '<script languaje = "javascript">
+                alert("Bienvenido Gerente"); 
+              </script>';
 		$_SESSION['user'] = $nombre;
 		header("location:../webGerente/indexGerente.php");
     }		
@@ -31,6 +34,9 @@ session_start();
 	if ($fila3>0){
 		$_SESSION['user'] = $nombre;
 		header("location:../webAdministrador/index.php");
+		echo '<script languaje = "javascript">
+                alert("Bienvenido Administrador");
+               </script>';
     }		
     else{
 	$rs= mysqli_query($conexion,$consulta);
@@ -39,7 +45,9 @@ session_start();
     if ($fila>0){
 		$_SESSION['user'] = $nombre;
 		header("location:../WebUsuario.php");
-
+		echo '<script languaje = "javascript">
+                alert("Bienvenido Cliente");
+               </script>';
     }
     else{
          echo '<script languaje = "javascript">
