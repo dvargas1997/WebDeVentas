@@ -1,28 +1,15 @@
 body {
-    margin: 10px;
-    width: 100%;
-    height: 100%;
-        background-image:url( ../img/fondo.jpg);
-   }url(https://fonts.googleapis.com/css?family=Erica+One);
-/* BODY */
-body {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-     background-image:url( img/fondo.jpg);
+  background: white;
   background-attachment: fixed;
-  background-size: 100% 100%;
-  overflow: hidden;
 
 }
-.imagen:hover {filter: blur(5px);}
-::selection {
-  background: transparent;
-}
-h1 {
+#kotitas{
   cursor: default;
   position: absolute;
   top: 5px;
@@ -39,60 +26,66 @@ h1 {
   line-height: 100px;
   text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6);
 }
-h5{
-  font-size: 44px;
-  font-family: corbel;
-  color: ;
-}
-h6{
-  font-size: 20px;
-  font-family: corbel;
-  color: black;
-}
-h7{
-  font-size: 12px;
-  font-family: corbel;
-  color:  #1c2833 ;
-}
-h8{
-  font-size: 20px;
-  font-family: corbel;
-  color: black;
-}
-h9{
-  font-size: 12px;
-  font-family: corbel;
-  color:  #1c2833 ;
-}
-
-/* ANIMATION */
 @-webkit-keyframes bounce {
   100% {
     top: 30px;
     text-shadow: 0 0px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 4px 0 #CCC, 0 5px 0 #CCC, 0 6px 0 #CCC, 0 7px 0 #CCC, 0 8px 0 #CCC, 0 9px 0 #CCC, 0 0px 0px rgba(0, 0, 0, 0.3);
-  }
+  }*/
 }
-   header {
-
+h1{
+  font-size: 20px;
+  font-family: corbel;
+  color: black;
+}
+h2{
+  font-size: 20px;
+  font-family: corbel;
+  color: black;
+}
+h3{
+  font-size: 12px;
+  font-family: corbel;
+  text-align: justify;
+  color:  #1c2833;
+  width: 75%;
+  height: 25%;
+}
+h4{
+  font-size: 20px;
+  font-family: corbel;
+  color: black;
+}
+h5{
+  font-size: 12px;
+  font-family: corbel;
+  text-align: justify;
+  color:  #1c2833;
+  width: 75%;
+  height: 25%;
+}
+  header {
     text-orientation: center;
     font-size:100px;
     font-family: 'Monoton', cursive;
     background-image:url();
     margin: 200px;
+    display: block;
    }
    /*CSS DEL NAV Y MENU DESPLEGABLE*/
 
-   nav{
+   #nav{
+
+    height: 5%;
     width: 100%;
-    height: 5px;
     font-family: corbel;
-    margin-left: 400px;
-    margin-right: 450px;
+    margin-left:40% ;
+    margin-right: 40%;
    }
 
  ul, ol { list-style:none; } .nav > li { float:left; }
  .nav li a {
-  background-color: #698595 ;
+  border-radius: 2em;
+  background-color:#900C3F;
   color:white;
   text-decoration:none;
   padding:15px 20px;
@@ -108,194 +101,99 @@ h9{
  .nav li ul li { position:relative; }
  .nav li ul li ul { right:-140px; top:0px; }
 
-
-
-   section{
-       width: 100%;
-       height: 100%;
-       align-content: center;
-   }
-   #contenedor #titu{
-     width: 100%;
-     background: #f38524 ;
-   }
    #contenedor{
-     background: #d1e2e4 ;
-     height: 1500px;
-     width: 1000px;
-     margin-right: auto;
-     margin-left: auto;
+     background: rgba(0,0,0,.08);
+     height: auto;
+     width: 85%;
+   }
+   #carrusel{
+     background: white;
+     width: 75%;
+     align-content: left;
+     margin-left:25%;
+     margin-right:25%;
+     margin-top: 10%;
    }
    #Noticias{
      margin-left: 10px;
      margin-right: 10px;
      margin-top: 10px;
-     width: 1000px;
+     width: 100%;
    }
 
-   #Noticias #Izquierda{
-     height: 400px;
-     width: 600px;
-     background:#cd6155;
+ p{
+   background-color:#581845;
+   border-radius: 2em;
+     font-size: 10%;
+     font-family: corbel;
+     text-align: center;
+     width: 10%;
+     margin-left: 2px;
 
    }
-
-  #Noticias #Centro{
-    background: #f5b041   ;
-    height: 400px;
-    width: 600px;
-
+   #Izquierda{
+     height: 500px;
+     width: 550px;
+     background: white;
+     display: inline-block;
+     margin-left: 2px;
+     margin-right: 2px;
+     float: left;
+   }
+  #Centro{
+    height: 500px;
+    width: 550px;
+    background: white;
+    display: inline-block;
+    margin-left: 2px;
+    margin-right: 2px;
+    float: right;
   }
   #novedades{
     background: white;
-    width: 200px;
-    height:100px;
+    width: 1200px;
+    height: 2%;
+    display: inline-block;
+    margin-top: 5%;
+  }
+  #novedades1{
+    background: ;
+    color:  #c39bd3 ;
+    width: 293px;
+    height:200px;
+    margin:1px;
+    text-align: justify;
     display: inline-block;
 
   }
   #novedades2{
-    background: black;
+    background:  #af7ac5 ;
     color: white;
-    width: 200px;
-    height:100px;
+    width: 293px;
+    height:200px;
+    margin:1px;
+    text-align: justify;
     display: inline-block;
 
   }
   #novedades3{
-    background: white;
-    width: 200px;
-    height:100px;
+    background:  #c39bd3 ;
+    color: white;
+    width: 293px;
+    height:250px;
+    text-align: justify;
     display: inline-block;
-
-  }
-
-
-   // Layout Mixin
-
-   @mixin layout ($var) {
-
-       $padding-x: map-get($var, padding-x);
-       $padding-y: map-get($var, padding-y);
-       $padding-outer-x: map-get($var, padding-outer-x);
-       $padding-outer-y: map-get($var, padding-outer-y);
-
-       .container {
-           padding: $padding-outer-y $padding-outer-x;
-           &.show-border {
-               padding: ($padding-outer-y - 1) ($padding-outer-x - 1);
-           }
-       }
-       .element {
-           padding: ($padding-y / 2) ($padding-x / 2);
-           &.show-border {
-               padding: ($padding-y / 2 - 1) ($padding-x / 2 - 1);
-           }
-       }
+    margin: 1px;
    }
+   #novedades4{
+     background:  #af7ac5 ;
+     color: white;
+     width: 293px;
+     height:200px;
+     margin: 1px;
+     text-align: justify;
+     display: inline-block;
 
-   // Spacing variables
-   $spacing: (
-       padding-x: 10px,
-       padding-y: 20px,
-       padding-outer-x: 40px,
-       padding-outer-y: 30px
-   );
-   $spacing-tablet: (
-       padding-x: 10px,
-       padding-y: 10px,
-       padding-outer-x: 20px,
-       padding-outer-y: 20px
-   );
-
-   // Generate Default CSS Rules
-   @include layout($spacing);
-
-   // Generate CSS Rules for tablet view
-   @media (max-width: 768px) {
-       @include layout($spacing-tablet);
-   }
-
-   .flex {
-       display: flex;
-       box-sizing: border-box;
-   }
-
-   .row {
-
-       flex-flow: row wrap;
-   }
-
-   .col {
-       flex-flow: column wrap;
-   }
-
-   .element {
-       min-width: 100px;
-   }
-
-   .content {
-       flex: 1 100%;
-   }
-
-   .structure {
-       min-height: 480px;
-   }
-
-   .structure-1 {
-       flex: 1 percentage(5/9);
-   }
-
-   .a {
-       flex: 1 percentage(2/5);
-
-   }
-
-   .b {
-       flex: 1 percentage(3/5);
-   }
-
-   .structure-1-2-1 {
-       flex: 1 percentage(1/5);
-   }
-
-   .c,
-   .d {
-       flex: 1 percentage(1/2);
-   }
-
-   .e {
-       flex: 1 percentage(4/5);
-   }
-
-   .structure-2 {
-       flex: 1 percentage(4/9);
-   }
-
-   .f {
-       flex: 1 percentage(2/4);
-   }
-
-   .structure-2-2 {
-       flex: 1 percentage(2/4);
-   }
-
-   .g {
-       flex: 1 percentage(3/4);
-   }
-
-   .h {
-       flex: 1 percentage(1/4);
-   }
-   .contenedor:hover .imagen{-webkit-transform:scale(1.3);transform:scale(1.3);}
-   .contenedor{ overflow :hidden;}
-   @media (max-width: 768px) {
-       .structure-1,
-       .structure-2,
-       .f,
-       .structure-2-2{
-           flex: 1 100%;
-           min-height: 480px;
-       }
    }
    #menu{
     margin: 0px;
@@ -313,7 +211,6 @@ h9{
     color: black;
 
    }
-
    h1{
     margin:  10px;
     color: black
@@ -329,7 +226,9 @@ h9{
     text-align: left;
    }
    p{ font-size: 30px;
+     background-color:#5d6d7e ;
     text-align: left;
+    width: 50%;
     color: black;}
 .table img{
 height: 100px;
@@ -346,10 +245,10 @@ width: 250px;
 margin-left: -30px;
 }
 footer{
-    background-color: #202020;
-    width: 100%;
+    background-color: #5d6d7e ;
+    width: 1300px;
     color: #fff;
-    margin: 20px;
+    margin: 10px;
     content:center;
    }
    .container-footer{
@@ -357,24 +256,27 @@ footer{
 
    }
    .columna1{
-    width: 400px;
-    padding-top: 10px;
+    width: 100%;
+    padding-top: 5px;
 
    }
    .columna1 h2{
     font-size: 22px;
+    font-family: corbel;
    }
    .columna1 p{
     font-size: 12px;
+    font-family: corbel;
     color: #c7c7c7;
    }
    .columna2{
-    width: 400px;
+    width: 100%;
     max-width: 400px;
     padding-top: 10px;
    }
    .columna2 h2{
     font-size: 22px;
+    font-family: corbel;
 
    }
    .columna2 .row{
@@ -395,12 +297,13 @@ footer{
    }
    .columna3{
     padding-top: 10px;
-    width: 400px;
+    width: 600px;
    }
    .columna3 h2{
     font-size: 22px;
+    font-family: corbel;
 
    }
    .columna1, .columna2, .columna3{
-      margin-left: 15px;
+      margin-left: 10px;
    }
