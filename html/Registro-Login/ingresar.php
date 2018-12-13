@@ -30,7 +30,7 @@ session_start();
 	$fila3= mysqli_num_rows($rs3);
 	if ($fila3>0){
 		$_SESSION['user'] = $nombre;
-		header("location:../webAdministrador/index.php");
+		header("location:../webAdministrador/resultado.php");
     }		
     else{
 	$rs= mysqli_query($conexion,$consulta);
