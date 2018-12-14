@@ -1,16 +1,15 @@
 <?php
-session_start();
-if(@!$_SESSION['user']){
-	header("location:../index.html");
-}
+include_once("conecta.php");
+$consulta = laconsulta();
 ?>
+
 <!DOCTYPE html>
 <html leng="es">
 	<head>
 		<title>Gerente</title>
 		<meta charset="UTF-8">
 		<link href="https://fonts.googleapis.com/css?family=Copse|Gochi+Hand|Handlee|Playfair+Display+SC" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="stylesheet" href="../Style/estilogerente.css">
 	</head>
 	<body>
 		<header>
@@ -22,30 +21,47 @@ if(@!$_SESSION['user']){
 	<nav>
 		<ul class="navegación">
 			<ul class="menu">
-				<li><a href="../Registro-Login/cerrarsesion.php">Cerrar Sesion</a>
-				</li>
+				<li><a href="#">Productos</a>
+				<ul class="submenu">
+					<li><a href="#">Revisar Precio</a></li>
+					<li><a href="#">Revisar Cantidad</a></li>
+					<li><a href="#">Revisar Usuarios</a></li>
+				</ul>
 			</ul>
 		</ul>
 	</nav>
-	<section class="principal">
-
-
-	<div class="formulario">
-		<label for="caja_busqueda">Buscar</label>
-		<input type="text" name="caja_busqueda" id="caja_busqueda"></input>
-
-		
-	</div>
-
-	<div id="datos"></div>
-	
-	
-</section>
-
-
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+	<section>
+		<div class="row">
+			<div class="col-xs-12">
+			<h3>Lista base de datos</h3>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th width="100">ID</th>
+							<th width="250">Producto</th>
+							<th width="200">Precio</th>
+							<th width="200">Cantidad</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+						while($persona = $consulta->fetch_assoc())
+						{
+						?>
+						<tr>
+							<td><?php echo $persona["id_producto"]; ?></td>
+							<td><?php echo $persona["producto"]; ?></td>
+							<td><?php echo $persona["precio"]; ?></td>
+							<td><?php echo $persona["cantidad"]; ?></td>
+						</tr>
+						<?php
+						}
+						?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
 	<footer>
 
     <div class="container-footer">

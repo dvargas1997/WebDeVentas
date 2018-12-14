@@ -20,6 +20,7 @@ if(@!$_SESSION['user']){
     <meta name ="viewport" content="width=width-device, initial-scale=1">
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../jquery/jquery-3.3.1.min.js"></script>
+
     
      
        
@@ -56,51 +57,25 @@ if(@!$_SESSION['user']){
 
     </header>
 
-   <section>
-          
-        <div class="container">
-          <form  action= "busquedaP.php" method="get">
-                <input type="text" name="busqueda" id="busqueda" placeholder="Buscar...">
-                <input type="submit" value="Buscar">
-            </form>
-        </div>
-           
-               <?php 
-                
-                
-                  if(!isset($_GET['action'])){
-                    
-                      include 'MUsuarios.php';
-                  }
-                      else{
-                        
-                                                                  
-                        $accion = $_GET['action'];
+<section class="principal">
 
-                        if($accion == 'addp'){
 
-                            include 'insertarproductos.php';
+	<div class="formulario">
+		<label for="caja_busqueda">Buscar</label>
+		<input type="text" name="caja_busqueda" id="caja_busqueda"></input>
 
-                        }elseif($accion == 'eliminarp'){
+		
+	</div>
 
-                            include 'mostrarprductos.php';
+	<div id="datos"></div>
+	
+	
+</section>
 
-                        }elseif($accion == 'usuarios'){
 
-                            include 'MUsuarios.php';
 
-                        }else{
-                            include 'MUsuarios.php';
-                        }
-                  }
-                
-        
-                ?>
-            
-           
-  
-  </section>
-
+<script type="text/javascript" src="iava/jquery.min.js"></script>
+<script type="text/javascript" src="iava/main.js"></script>
     <footer>
 
     <div class="container-footer">

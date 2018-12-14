@@ -26,7 +26,7 @@ echo '<script>alert("El producto ya se encuentra agregado")</script>';
 else
 {
 $item_array = array(
-'item_id' => $_GET["id_producto"],
+'item_id' => $_GET["id"],
 'item_name' => $_POST["hidden_producto"],
 'item_price' => $_POST["hidden_precio"],
 'item_quantity' => $_POST["quantity"]
@@ -131,7 +131,7 @@ $total = $total + ($values["item_quantity"] * $values["item_price"]);
 
 }
 ?></table>
- <input type="submit" onclick="location.href = 'carrito.html'" name="Submit" value="Comprar"/>
+ <input type="submit" onclick="location.href = 'carrito2.php'" name="Submit" value="Comprar"/>
 
 
 </div>

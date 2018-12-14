@@ -78,8 +78,8 @@ INSERT INTO `clientes` (`id_cliente`, `Nombre_cliente`, `Apellido`, `usuario`, `
 (3, 'lalete', 'niripil', 'lalux', '12354', 'lalitox@gmail.com', '123456', ''),
 (4, 'lalicio', 'delbum', 'dvargas', 'a6bb4faacdff9dcdcb6f6e22bc51eac9', 'diegovargas@gmail.com', '945162712', ''),
 (5, 'lalic', 'delbu', 'dvargas', 'a6bb4faacdff9dcdcb6f6e22bc51eac9', 'diegovargas@gmail.com', '945162712', ''),
-(6, 'nat', 'nov', 'nat', '25f9e794323b453885f5181f1b624d0b', 'nnovoa2017@alu.uct.cl', '168296854', ''),
-(7, 'macarena', 'gallardo', 'maraquis', '8642955a15967c74a3a871fdecd77a5a', 'maca.maraca@gmail.com', '987654323', ''),
+
+
 (8, 'diego', 'vargas', 'hola', '202cb962ac59075b964b07152d234b70', 'diegovargas@gmail.com', '900', '');
 
 -- --------------------------------------------------------

@@ -56,7 +56,7 @@ if(@!$_SESSION['user']){
             
        </li>
 		 <li><a href="#">Cambiar Cuenta</a></li>
-		 <li><a href="#">Cerrar Sesión</a></li>
+		 <li><a href="Registro-Login/cerrarsesion.php">Cerrar Sesión</a></li>
         </nav>
  
    <section id = "contenedor">
