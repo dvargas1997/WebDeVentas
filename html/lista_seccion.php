@@ -25,30 +25,20 @@ $host = "localhost";
 //    header('Content-Type: image/jpeg');
   //  echo base64_encode($fila['imagenes']);
     //    header('Content-Type: text/html');
-      ?>          
 
-      <img width="50px" height="50px;" src="data:image/jpg;base64,<?php echo base64_encode($fila['imagenes']); ?>"/>
+    echo "<a href = 'muestra.php?id=".$fila['id_producto']."'>";
+?>      
+<img width="50px" height="50px;" src="data:image/jpg;base64,<?php echo base64_encode($fila['imagenes']); ?>"/></a>
 
 <?php
-      echo "</left>";
-       echo "<left>";
-    echo "<br>$fila[precio] <br><br>";
-     echo "</left>";
+  
 
-  echo "<left>";
-  echo "DESCRIPCION <br>";
-    echo "$fila[descripcion]<br>";
-    echo "</left>";
-     $cf++;
-    if ($cf==7) {
-    echo "</td>";
-    echo "<td>";
+
     }
     
-  }
+  
   echo "</td></tr></table>";
 
 
 ?>
-
 
