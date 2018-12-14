@@ -114,7 +114,7 @@ foreach($_SESSION["shopping_cart"] as $keys => $values)
 <td><?php echo $values["item_name"]; ?></td>
 <td class='text-center'><?php echo $values["item_quantity"]; ?></td>
 <td class='text-right'>$ <?php echo $values["item_price"]; ?></td>
-<td class='text-right'>$ <?php echo number_format((int)$values["item_quantity"] * $values["item_price"], 3); ?></td>
+<td class='text-right'>$ <?php echo number_format((int)$values["item_quantity"] * $values["item_price"]); ?></td>
 <td><a href="carrito.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Eliminar</span></a></td>
 </tr>
 <?php
@@ -123,7 +123,7 @@ $total = $total + ($values["item_quantity"] * $values["item_price"]);
 ?>
 <tr>
 <td colspan="3" align="right">Total</td>
-<td align="right">$ <?php echo number_format($total, 3); ?></td>
+<td align="right">$ <?php echo number_format($total); ?></td>
 <td></td>
 </tr>
 
