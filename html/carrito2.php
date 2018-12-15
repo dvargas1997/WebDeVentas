@@ -1,39 +1,40 @@
 <?php
 session_start();
 
- 
- echo "<table border = 1 >
-            <tr> <td>";
+
+ echo "<table style='position:absolute;top:100px;left:500px;' border = 1>" ;
+   echo "<center>";   
 
 $total = 0;
 foreach($_SESSION["shopping_cart"] as $keys => $values)
 {
 ?>
 
-<tr>
-  <tr>
-<th width="40%">Descripción</th>
+
+<center>
+  <center><font size= 6><p>Detalle de la Compra</p></font></center>
+<center><th width="40%">Descripción</th></center>
 <th width="10%" class='text-center'>Cantidad</th>
-<th width="20%" class='text-right'>Precio</th>
+<th width="20%" class='text-right'>Precio unitario</th>
 <th width="15%" class='text-right'>Total</th>
-<th width="5%"></th>
+
 </tr>
  
-<td><?php echo $values["item_name"]; ?></td>
-<td class='text-center'><?php echo $values["item_quantity"]; ?></td>
-<td class='text-right'>$ <?php echo $values["item_price"]; ?></td>
-<td class='text-right'>$ <?php echo number_format((int)$values["item_quantity"] * $values["item_price"]); ?></td>
-<td><a href="carrito.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Eliminar</span></a></td>
+<center><td><?php echo $values["item_name"]; ?></td></center>
+<center><td class='text-center'><?php echo $values["item_quantity"]; ?></td></center>
+<center><td class='text-right'>$ <?php echo $values["item_price"]; ?></td></center>
+<center><td class='text-right'>$ <?php echo number_format((int)$values["item_quantity"] * $values["item_price"],3); ?></td></center>
+
 </tr>
 <?php
 $total = $total + ($values["item_quantity"] * $values["item_price"]);
 }
 ?>
-<tr>
-<td colspan="3" align="right">Total</td>
-<td align="right">$ <?php echo number_format($total); ?></td>
-<td></td>
-</tr>
+
+<center><strong><td colspan="3" align="center">Total</td></strong></center>
+<td align="right">$ <?php echo number_format($total,3); ?></td>
+</center>
+
 
 
 
@@ -65,7 +66,7 @@ $total = $total + ($values["item_quantity"] * $values["item_price"]);
  
  </head>
  
- 
+ <left>
  <body>
  <div id="todo" class="todoNo">
  <div id="menu" class="menuNo">
@@ -245,6 +246,7 @@ $total = $total + ($values["item_quantity"] * $values["item_price"]);
  
  
 
+<br>
  </div>
  </div> 
  </div>
@@ -253,11 +255,12 @@ $total = $total + ($values["item_quantity"] * $values["item_price"]);
  </div>
 <button><a href="WebUsuario.php">Comprar</button>
  <button ><a href="WebUsuario.php">Volver</button></a>
- 
+ <br>
+ <br>
 
                              
          </form>
   <font size="8"></font>
   </section>
- 
+ </left>
  </body>
