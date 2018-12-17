@@ -13,37 +13,38 @@ $host = "localhost";
 
     $resultado = mysqli_query($con, $query);
 
-    echo "<table >
-            <tr> <td>";
-    
+
 
     while ( $fila = mysqli_fetch_array($resultado)) {
      
    echo "<left>";
 
-    echo "<br>$fila[producto] <br>";
-//    header('Content-Type: image/jpeg');
-  //  echo base64_encode($fila['imagenes']);
-    //    header('Content-Type: text/html');
-      ?>          
-<img width="50px" height="50px;" src="data:image/jpg;base64,<?php echo base64_encode($fila['imagenes']); ?>"/></a>
+    echo "<font size = 6><left><br>$fila[producto] <br></left></font>";
+echo "<br>";
 
+
+ ?>          
+<left><img width="300px" height="300px;" src="data:image/jpg;base64,<?php echo base64_encode($fila['imagenes']); ?>"/></a></left>
+<center>
+<h2>Cantidad: <input type="text" name="numero"/></h2>
+<br>
+<button><a href="carrito2.php">Comprar</button>
+ <button ><a href="WebUsuario.php">Volver</button></a>
+</center>
 <?php
-      echo "</left>";
-       echo "<left>";
-    echo "<br>$fila[precio] <br><br>";
-     echo "</left>";
+    
+    echo "<font size = 6><br>$ $fila[precio] <br><br></font>";
 
-  echo "<left>";
-  echo "DESCRIPCION <br>";
-    echo "$fila[descripcion]<br>";
-    echo "</left>";
+  echo "<font size = 4>DESCRIPCION :<br></font>";
+    echo "<font size = 4>$fila[descripcion]<br></font>";
+
     
     
   }
-  echo "</td></tr></table>";
 
+echo "</left>";
 
 ?>
-
+<br>
+<br>
 
