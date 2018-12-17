@@ -50,10 +50,10 @@
                  <td><?php echo $mostrar['e_mail']; ?></td>
                 <td><?php echo $mostrar['tipo_usuario']; ?></td>
                        
-                <td><?php echo '<a class="btn btn-sm btn-danger" href="index.php?action=usuarios&eliminar='.$mostrar['id_cliente'].'" >eliminar</a>' ?></td>
+                <td><?php echo '<a class="btn btn-sm btn-danger" href="index.php?action=usuarios&eliminar='.$mostrar['id_cliente'].'" > <i class="fas fa-trash-alt"></i></a>'; ?></td>
                       
                 <td><?php
-                    echo '<a class="btn btn-sm btn-warning" href="index.php?action=usuarios&editar='.$mostrar['id_cliente'].'" >Editar</a>'
+                    echo '<a class="btn btn-sm btn-warning" href="index.php?action=usuarios&editar='.$mostrar['id_cliente'].'" > <i class="fas fa-pencil-alt"></i></a>';
                     ?>
                 </td>
                 
@@ -114,7 +114,9 @@
                         <input type="hidden"   name="id"  value="'. $mostrar['id_cliente']. '" required>
                              
                     </td>
-                         <td></td>
+                         <td>
+                         <a class="btn btn-danger" href="index.php?action=usuarios"> cancelar </>
+                         </td>
                         
                         
                     </div>
