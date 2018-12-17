@@ -5,48 +5,85 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="formulario_2.css">
 		<script src="validar.js"></script>
-			
+		
+           <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+            <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme" rel="stylesheet">
+
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+            <meta name ="viewport" content="width=width-device, initial-scale=1">
+            <script src="../bootstrap/js/bootstrap.min.js"></script>
+            <script src="../jquery/jquery-3.3.1.min.js"></script>
+
 	</head>
-         <div class="contenedor">
-		  	<form class="form" action="registrar.php" onsubmit="return Validar()" method="post">
+         <div class="container">
+		  	<form class="" action="registrar.php" onsubmit="return Validar()" method="post">
 				
 					
-						<div class="form-header">
+						
 							
-							<h1>Registro</h1>
+							<h1 class = "h1" >Registro</h1>
 							
-							<div class="container-sub">
+							<div class="form-group">
 								
-								<p class="sub-form">Completa tus datos Personales</p><p class="sub-form2"> * campos obligatorios</p>
+                                <h4 class="h4">Completa tus datos Personales 
+                                </h4>
+                                <small class="text-muted">* campos obligatorios</small> 
 
 							</div>
-							
+							    <div class = "form-group">
+							        
 								<label for="nom" class = "form-label">*Nombre</label> 
-								<input id="nombre" type="text" name="nombre" placeholder="Nombre" class="form-input" >
+								<input id="nombre" type="text" name="nombre" placeholder="Nombre" class="form-control" >
+							    </div>
+								
+								<div class="form-group">
 								
 								<label for="ape" class = "form-label">*Apellido </label>
-								<input id="apellido" type="text" name="apellido" placeholder="Apellido " class="form-input" >
+								<input id="apellido" type="text" name="apellido" placeholder="Apellido " class="form-control" >
+								    
+								</div>
+								
+								<div class="form-group">
 								
 								<label for="ema" class = "form-label">*Email</label>
-								<input id="email" type="email" name="email" placeholder="Correo" class="form-input" >
-								
+								<input id="email" type="email" name="email" placeholder="Correo" class="form-control" >
+								    
+								</div>
+								<div class="form-group">
+								    
 								<label for="usu" class = "form-label">*Usuario</label>
-								<input id="usuario" type="text" name="usuario" placeholder="Usuario" class="form-input" >
+								<input id="usuario" type="text" name="usuario" placeholder="Usuario" class="form-control" >
 								
+								</div>
+								
+								<div class="form-group">
+								    
 								<label for="pass" class = "form-label">*Contraseña</label>
-								<input id="password" type="password" name="contrasena" placeholder="*******" class="form-input" >
+								<input id="password" type="password" name="contrasena" placeholder="*******" class="form-control" >
+								</div>
 								
+								<div class="form-group">
+								    
 								<label for="cue" class = "form-label">*Telefono</label>
-								<input id="telefono" type="text" name="telefono" placeholder="912321323" class="form-input" >
-							</div>
+								<input id="telefono" type="text" name="telefono" placeholder="912321323" class="form-control" >
+								</div>
+							
+							<div class="form-group">
+							    
 						<input class="check" type="checkbox" id="tdr" name="tdr">
 						<label for="tdr" class="check-label">*Acepto los Términos</label><br>
-								
+				        
+				        <input type="submit" class = "btn btn-primary" value="GUARDAR">
+				        </div>
+					</div>			
 
 				
 				
 				
-				<input type="submit" class = "submit-btn" value="GUARDAR">
+				
 		
 			 </form>	
 		</div>	      
