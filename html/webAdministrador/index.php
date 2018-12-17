@@ -56,7 +56,6 @@ if(@!$_SESSION['user']){
 
    <section>    
         
-            
        
                
                <?php 
@@ -64,11 +63,14 @@ if(@!$_SESSION['user']){
                 
                   if(!isset($_GET['action'])){
                      echo "
+                            
+                        <div class='container'>
                            <div class='cold-md-2'>
-
                             <img  src='img/Admin.png' class='img-responsive img-circle' alt='administracion' width='90%'>
-
                            </div>
+                        </div>
+
+
                             </div>";
                      
                   }

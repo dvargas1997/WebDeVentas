@@ -1,8 +1,26 @@
 <?php 
   require 'conexion.php';
+    if(!isset($_GET['guardar'])){
+                
+            }else{
+                $guardar = $_POST['guardar'];
+                
+                $nombre = $_POST['nombre'];
+                 $apellido = $_POST['apellido'];
+                 $usuario= $_POST['usuario'];
+                 $telefono= $_POST['telefono'];
+                 $email= $_POST['email'];
+                 $tipo= $_POST['tipo'];
+                
+                
+                $consulta = "Update clientes Set Nombre_Cliente = '$nombre' , Apellido = '$apellido', USUARIO = '$usuario', nro_telefono = '$telefono', email='$email' , tipo_usuario = '$tipo' Where id = '$guardar'";
+                
+                $ejecuta = mysqli_query($conexion,$consulta);
+            }
   
   ?>
    <div class="container">
+     
       
         <table class="table table-hover table-bordered">
             <tr class="danger">
@@ -51,7 +69,7 @@
                 echo '<tr class="danger">';
                 
                    
-            echo   " <form class='form-horizontal' method='POST' action='' autocomplete='off' >
+            echo   " <form class='form-horizontal' method='POST' action='Usuarios/editar.php' autocomplete='off' >
                     <div class='form-group'>
                        <td rowspand = '2'>
                            <label for='nombre'>". $mostrar['id_cliente'] ."</label>
@@ -59,38 +77,43 @@
                         
             echo '<td>
                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="'. $mostrar['Nombre_cliente'].'" required>
-                </td>';
+                    </td>';
                         
                         
             echo  '<td>
-                     <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'.$mostrar['Apellido'].'" required></td>';
+                     <input type="text" class="form-control" id="producto" name="apellido" placeholder="" value="'.$mostrar['Apellido'].'" required></td>';
                     
                         
                echo '          <td>
-                            <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'.  $mostrar['USUARIO'].'" required>
+                            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="" value="'.  $mostrar['USUARIO'].'" required>
                               
                           </td>';
                         
                         
                echo '        <td>
-                            <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'.  $mostrar['nro_telefono'] .'" required>
+                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="" value="'.  $mostrar['nro_telefono'] .'" required>
                             
                         </td>'  ;                       
                         
                         
                 echo '     <td>
-                            <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'. $mostrar['e_mail'] .'" required>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="" value="'. $mostrar['e_mail'] .'" required>
                         </td>';
                             
                         
                 echo    '<td>
-                            <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'. $mostrar['tipo_usuario']. '" required>
+                            <input type="text" class="form-control" id="tipo" name="tipo" placeholder="" value="'. $mostrar['tipo_usuario']. '" required>
                              
                          </td>';
                       
-                echo ' <td>
-                             <a href="index.php?action=usuarios&guardar='.$editar.'" class="btn btn-primary">Guardar</a>
-                         </td>
+                /*<a href="index.php?action=usuarios&guardar='.$editar.'" class="btn btn-primary">Guardar</a>*/
+            
+               echo ' <td>
+						
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <input type="hidden"   name="id"  value="'. $mostrar['id_cliente']. '" required>
+                             
+                    </td>
                          <td></td>
                         
                         
