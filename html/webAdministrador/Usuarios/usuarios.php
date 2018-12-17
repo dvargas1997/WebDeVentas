@@ -1,12 +1,127 @@
 <?php 
-    include 'conexion.php';
-    
-    $eliminar = $_GET['eliminar'];
-    $editar = $_GET['editar'];
-    
-    if(isset($eliminar)){
-        $_DELETE_SQL =  "DELETE FROM clientes WHERE id_cliente = '$eliminar'";
-        mysqli_query($conexion,$_DELETE_SQL); 
-    }
-    header('location:index.php');
-?>
+  require 'conexion.php';
+  
+  ?>
+   <div class="container">
+      
+        <table class="table table-hover table-bordered">
+            <tr class="danger">
+              <th>ID</th>
+              <th>NOMBRE</th>
+              <th>APELLIDO</th>
+              <th>USUARIO</th>
+              <th>TELEFONO</th>
+              <th>E-MAIL</th>
+              <th>TIPO USUARIO</th>
+
+            </tr>
+            <?php 
+
+                $sql = "SELECT id_cliente, Nombre_cliente, Apellido, USUARIO, e_mail, nro_telefono, tipo_usuario FROM clientes";
+                $retornosql = mysqli_query($conexion,$sql);
+                while($mostrar = mysqli_fetch_array($retornosql)){
+                
+            ?>
+            <tr>
+                
+                <td><?php echo $mostrar['id_cliente']; ?></td>
+                <td><?php echo $mostrar['Nombre_cliente']; ?></td>
+                <td><?php echo $mostrar['Apellido']; ?></td>
+                <td><?php echo $mostrar['USUARIO']; ?></td>
+                <td><?php echo $mostrar['nro_telefono']; ?></td>
+                 <td><?php echo $mostrar['e_mail']; ?></td>
+                <td><?php echo $mostrar['tipo_usuario']; ?></td>
+                       
+                <td><?php echo '<a class="btn btn-sm btn-danger" href="index.php?action=usuarios&eliminar='.$mostrar['id_cliente'].'" >eliminar</a>' ?></td>
+                      
+                <td><?php
+                    echo '<a class="btn btn-sm btn-warning" href="index.php?action=usuarios&editar='.$mostrar['id_cliente'].'" >Editar</a>'
+                    ?>
+                </td>
+                
+            </tr>
+            <?php
+                
+            if(!isset($_GET['editar'])){
+             
+            }else{
+             
+                $editar = $_GET['editar'];
+                
+                echo '<tr class="danger">';
+                
+                   
+            echo   " <form class='form-horizontal' method='POST' action='' autocomplete='off' >
+                    <div class='form-group'>
+                       <td rowspand = '2'>
+                           <label for='nombre'>". $mostrar['id_cliente'] ."</label>
+                       </td>";
+                        
+            echo '<td>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="'. $mostrar['Nombre_cliente'].'" required>
+                </td>';
+                        
+                        
+            echo  '<td>
+                     <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'.$mostrar['Apellido'].'" required></td>';
+                    
+                        
+               echo '          <td>
+                            <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'.  $mostrar['USUARIO'].'" required>
+                              
+                          </td>';
+                        
+                        
+               echo '        <td>
+                            <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'.  $mostrar['nro_telefono'] .'" required>
+                            
+                        </td>'  ;                       
+                        
+                        
+                echo '     <td>
+                            <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'. $mostrar['e_mail'] .'" required>
+                        </td>';
+                            
+                        
+                echo    '<td>
+                            <input type="text" class="form-control" id="producto" name="producto" placeholder="" value="'. $mostrar['tipo_usuario']. '" required>
+                             
+                         </td>';
+                      
+                echo ' <td>
+                             <a href="index.php?action=usuarios&guardar='.$editar.'" class="btn btn-primary">Guardar</a>
+                         </td>
+                         <td></td>
+                        
+                        
+                    </div>
+                </form>
+            </tr>  '; 
+                
+            }
+            
+            
+              
+            
+            }
+            if(!isset($_GET['eliminar'])){
+                
+            }
+                
+             else{  
+                 $eliminar = $_GET['eliminar'];
+                if(isset($eliminar)){
+                $_DELETE_SQL =  "DELETE FROM clientes WHERE id_cliente = '$eliminar'";
+                mysqli_query($conexion,$_DELETE_SQL); 
+                }
+            }
+            
+           // $editar = $_GET['editar'];
+
+            
+           
+            ?>
+            
+        </table>
+       
+    </div>

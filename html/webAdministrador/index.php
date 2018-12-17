@@ -11,7 +11,6 @@ if(@!$_SESSION['user']){
   <meta charset="UTF-8">
 
     
-    <link href="https://fonts.googleapis.com/css?family=Copse|Gochi+Hand|Handlee|Playfair+Display+SC" rel="stylesheet">
 	
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme" rel="stylesheet">
@@ -29,8 +28,7 @@ if(@!$_SESSION['user']){
  <body>
   <header>
              
-          <h1 class = "kotitas">PetWorld</h1>
-      <nav class="menu">
+      <nav class="menu">    
         <ul>
             <li><a href="#" class="submenu">Gestion de Productos</a>
                  <ul>
@@ -54,15 +52,25 @@ if(@!$_SESSION['user']){
     </nav>
 
     </header>
+                
 
-   <section>
+   <section>    
         
+            
+       
+               
                <?php 
                 
                 
                   if(!isset($_GET['action'])){
-                    
-                      echo;
+                     echo "
+                           <div class='cold-md-2'>
+
+                            <img  src='img/Admin.png' class='img-responsive img-circle' alt='administracion' width='90%'>
+
+                           </div>
+                            </div>";
+                     
                   }
                       else{
                         
@@ -79,7 +87,7 @@ if(@!$_SESSION['user']){
                             
                         }elseif($accion == 'usuarios'){
 
-                            include 'Usuarios/MUsuarios.php';
+                            include 'Usuarios/Usuarios.php';
 
                         }else{
                             
