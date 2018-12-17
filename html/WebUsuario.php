@@ -27,27 +27,27 @@ if(@!$_SESSION['user']){
 
         </header>
   <nav>
-    <ul class="navegación">
+    <ul class="nav">
        <ul class="menu" >
          <li><a href="">Productos</a>
          <ul class="submenu">
            <li><a href="#">Vestuario</a></li>
            <ul>
-              <li><a href="lista_seccion.php?seccion=PERROS">Perros</a></li>
-               <li><a href="lista_seccion.php?seccion=GATOS">Gatos</a></li>
-                <li><a href="">otros</a></li>
+              <li><a href="vestuario_perros.php">Perros</a></li>
+               <li><a href="vestuario_gatos.php">Gatos</a></li>
+                <li><a href="vestuario_otros.php">otros</a></li>
            </ul>
            <li><a href="#">Accesorios</a></li>
            <ul>
-              <li><a href="lista_seccion.php?seccion=PERROS">Perros</a></li>
-               <li><a href="lista_seccion.php?seccion=GATOS">Gatos</a></li>
-                <li><a href="#">otros</a></li>
+              <li><a href="accesorios_perros.php">Perros</a></li>
+               <li><a href="accesorios_gatos.php">Gatos</a></li>
+                <li><a href="accesorios_otros.php">otros</a></li>
            </ul>
            <li><a href="#">Alimentos</a></li>
            <ul>
-              <li><a href="lista_seccion.php?seccion=PERROS">Perros</a></li>
-               <li><a href="lista_seccion.php?seccion=GATOS">Gatos</a></li>
-                <li><a href="#">otros</a></li>
+              <li><a href="alimento_perros.php">Perros</a></li>
+               <li><a href="alimento_gatos.php">Gatos</a></li>
+                <li><a href="alimento_otros.php">otros</a></li>
 
            </ul>
 </ul>
