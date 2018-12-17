@@ -17,6 +17,8 @@ if(@!$_SESSION['user']){
     <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme" rel="stylesheet">
     <link rel="stylesheet" href="styles/estiloindex.css" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    
     <meta name ="viewport" content="width=width-device, initial-scale=1">
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../jquery/jquery-3.3.1.min.js"></script>
@@ -30,7 +32,7 @@ if(@!$_SESSION['user']){
           <h1 class = "kotitas">PetWorld</h1>
       <nav class="menu">
         <ul>
-            <li><a href="index.php?action=productos" class="submenu">Gestion de Productos</a>
+            <li><a href="#" class="submenu">Gestion de Productos</a>
                  <ul>
                      <li><a href="index.php?action=addp">Agregar Productos</a></li>
                      <li><a href="index.php?action=eliminarp">Ver Productos</a></li>
@@ -41,36 +43,26 @@ if(@!$_SESSION['user']){
                
             </li>
             
-            <li><a href="#">Gestion Avisos</a>
-                  <ul>
-                     <li><a href="#">Crear Anuncio</a></li>
-                     <li><a href="#">Modificar Anuncio</a></li>
-                 </ul>
-            </li>
             
-            <li><a href="#">Eliminar Anuncio</a></li>
-			
-			<li><a href="../registro-login/cerrarsesion.php">Cerrar Sesion</a></li>
+			<li ><a class="btn" href="../registro-login/cerrarsesion.php">Cerrar Sesion</a></li>
+           
         </ul>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <i class="fa fa-search"></i></button>
+          </form>
     </nav>
 
     </header>
 
    <section>
-          
-        <div class="container">
-          <form  action= "busquedaP.php" method="get">
-                <input type="text" name="busqueda" id="busqueda" placeholder="Buscar...">
-                <input type="submit" value="Buscar">
-            </form>
-        </div>
-           
+        
                <?php 
                 
                 
                   if(!isset($_GET['action'])){
                     
-                      include 'MUsuarios.php';
+                      echo;
                   }
                       else{
                         
@@ -79,18 +71,18 @@ if(@!$_SESSION['user']){
 
                         if($accion == 'addp'){
 
-                            include 'insertarproductos.php';
+                            include 'Productos/insertarproductos.php';
 
                         }elseif($accion == 'eliminarp'){
 
-                            include 'mostrarprductos.php';
-
+                            include 'Productos/mostrarprductos.php';
+                            
                         }elseif($accion == 'usuarios'){
 
-                            include 'MUsuarios.php';
+                            include 'Usuarios/MUsuarios.php';
 
                         }else{
-                            include 'MUsuarios.php';
+                            
                         }
                   }
                 

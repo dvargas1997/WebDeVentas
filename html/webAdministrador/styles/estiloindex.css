@@ -66,7 +66,7 @@ top: 0;
 .menu a{
     display: block;
     padding: 14px 20px;
-    color: #f72929;
+    color: #ffff;
     text-decoration: none;
 }
 .menu a:hover{
@@ -76,39 +76,15 @@ top: 0;
     display: block;
     position: absolute;
 }
-   section{
-     
-       
-       
-   }
-section .contenedorphp{
-
-       
+.menu ul .cerrarsesion{
+    
+    display: flex;
+    
 }
-   #contacto{
-    margin-top: 0px;
-   }
-   #contacto li{
-    list-style:none;
-   }
-   p{ 
-        font-size: 30px;
-        text-align: left;
-        color: black;}
-        .ex2 img{
-        height: 100px;
-        width: 100px;
-        margin: 50px 0;
-        -webkit-transition: all 2s ease;
-        -moz-transition: all 2s ease;
-        -ms-transition: all 2s ease;
-        transition: all 2s ease;;
-    }
-   .ex2 img:hover {
-        height: 250px;
-        width: 250px;
-        margin-left: -30px;
-    }
+section{
+    height: 850px;
+}
+   
     footer{
         background-color: #202020;
         width: 100%;

@@ -10,8 +10,8 @@
               <th>NOMBRE</th>
               <th>APELLIDO</th>
               <th>USUARIO</th>
-              <th>E-MAIL</th>
               <th>TELEFONO</th>
+              <th>E-MAIL</th>
               <th>TIPO USUARIO</th>
 
             </tr>
