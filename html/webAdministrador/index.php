@@ -32,8 +32,8 @@ if(@!$_SESSION['user']){
         <ul>
             <li><a href="#" class="submenu">Gestion de Productos</a>
                  <ul>
-                     <li><a href="index.php?action=addp">Agregar Productos</a></li>
-                     <li><a href="index.php?action=eliminarp">Ver Productos</a></li>
+                     <li><a href="index.php?action=insertPro">Agregar Productos</a></li>
+                     <li><a href="index.php?action=actPro">Ver Productos</a></li>
                  </ul>
             </li>
             
@@ -79,11 +79,11 @@ if(@!$_SESSION['user']){
                                                                   
                         $accion = $_GET['action'];
 
-                        if($accion == 'addp'){
+                        if($accion == 'insertPro'){
 
                             include 'Productos/insertarproductos.php';
 
-                        }elseif($accion == 'eliminarp'){
+                        }elseif($accion == 'actPro'){
 
                             include 'Productos/mostrarprductos.php';
                             
