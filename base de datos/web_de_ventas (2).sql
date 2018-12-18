@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-12-2018 a las 18:23:27
+-- Tiempo de generación: 18-12-2018 a las 19:19:00
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `web_de_ventas`
 --
-CREATE DATABASE IF NOT EXISTS `web_de_ventas` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `web_de_ventas`;
 
 -- --------------------------------------------------------
 
@@ -64,7 +62,8 @@ INSERT INTO `clientes` (`id_cliente`, `Nombre_cliente`, `Apellido`, `usuario`, `
 (4, 'lalicio', 'delbum', 'dvargas', 'a6bb4faacdff9dcdcb6f6e22bc51eac9', 'diegovargas@gmail.com', '945162712', ''),
 (5, 'lalic', 'delbu', 'dvargas', 'a6bb4faacdff9dcdcb6f6e22bc51eac9', 'diegovargas@gmail.com', '945162712', ''),
 (8, 'diego', 'vargas', 'hola', '202cb962ac59075b964b07152d234b70', 'diegovargas@gmail.com', '900', ''),
-(9, 'lolo', 'lolo', 'lolo', 'd41d8cd98f00b204e9800998ecf8427e', 'lolo@lolo.com', '123456789', '');
+(9, 'lolo', 'lolo', 'lolo', 'd41d8cd98f00b204e9800998ecf8427e', 'lolo@lolo.com', '123456789', ''),
+(10, 'lulu', 'lulu', 'lulu', 'd41d8cd98f00b204e9800998ecf8427e', 'lulu@lulu', '987654321', '');
 
 -- --------------------------------------------------------
 
@@ -188,7 +187,7 @@ ALTER TABLE `avisos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `mascotas`
 --
