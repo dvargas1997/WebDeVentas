@@ -12,21 +12,20 @@
     
     <link href="https://fonts.googleapis.com/css?family=Copse|Gochi+Hand|Handlee|Playfair+Display+SC" rel="stylesheet">
 	
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme" rel="stylesheet">
     <link rel="stylesheet" href="webadministrador/styles/estiloindex.css" rel="stylesheet">
     
     <meta name ="viewport" content="width=width-device, initial-scale=1">
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../jquery/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
     
      
        
  </head>
  <body>
-  <header>
-             
-          <h1 class = "kotitas">PetWorld</h1>
+  <header>  
+	 <div class ="card-header"><h1 style="margin-left:600px">PetWorld</h1></div>
       <nav class="menu">
         <ul>
             <li><a href="#" class="submenu">Alimentos</a>
@@ -50,7 +49,8 @@
 					 <li><a href="accesorios_otros.php">Otros</a></li>
                  </ul>
             </li>
-			<li><a href="../registro-login/cerrarsesion.php">Cerrar Sesion</a></li>
+			<li><a href="registro-login/cerrarsesion.php">Cerrar Sesion</a></li>
+			<li><a href="index.html">Volver a la pagina principal</a></li>
         </ul>
     </nav>
 
@@ -59,7 +59,7 @@
    <section>
           
         <div class="container">
-			<table class="tabla_datos">
+			<table class="table">
 				<tr>
 					<td>Precio</td>
 					<td>Cantidad</td>
@@ -77,6 +77,7 @@
 					<td><?php echo $mostrar['precio'] ?></td>
 					<td><?php echo $mostrar['cantidad'] ?></td>
 					<td><?php echo $mostrar['descripcion'] ?></td>
+					<td><a href="carrito.php"><input type="button" class="btn" value="Comprar" name="boton"></a></input></td>
 				</tr>
 			<?php 
 			}

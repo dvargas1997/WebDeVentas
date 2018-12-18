@@ -73,9 +73,9 @@ while($row = mysqli_fetch_array($result))
 <div class="col-md-4">
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>?action=add&id=<?php echo $row["id_producto"]; ?>">
 <div class="thumbnail">
-<img width="100px" height="100px;" src="data:image/jpg;base64,<?php echo base64_encode($row['imagenes']); ?>"/> </td>
+<img style="width:140px; height:150px;" src="data:image/jpg;base64,<?php echo base64_encode($row['imagenes']); ?>"/> </td>
 <div class="caption">
-<h4 class="text-info text-center"><?php echo $row["producto"]; ?></h4>
+<h4 class="text-info text-center"><?php echo $row["descripcion"]; ?></h4>
 <h4 class="text-danger text-center">$ <?php echo $row["precio"]; ?></h4>
 <input type="text" name="quantity" class="form-control" value="1" />
 <p class='text-center'>
@@ -132,6 +132,7 @@ $total = $total + ($values["item_quantity"] * $values["item_price"]);
 }
 ?></table>
  <input type="submit" onclick="location.href = 'carrito2.php'" name="Submit" value="Comprar"/>
+ <a href="alimento_perros.php"><input type="button" value="Volver"></input></a>
 
 
 </div>
