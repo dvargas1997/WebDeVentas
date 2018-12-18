@@ -69,6 +69,7 @@
 					<td>Precio</td>
 					<td>Cantidad</td>
 					<td>Descripcion</td>
+					<td>Imagenes</td>
 				</tr>
 
 				<?php 
@@ -82,6 +83,7 @@
 					<td><?php echo $mostrar['precio'] ?></td>
 					<td><?php echo $mostrar['cantidad'] ?></td>
 					<td><?php echo $mostrar['descripcion'] ?></td>
+					<td><img style="width:75px; height:75px;" src="data:image/jpg;base64,<?php echo base64_encode($mostrar['imagenes']); ?>"/></td>
 					<td><a href="carrito.php"><input type="button" class="btn" value="Comprar" name="boton"></a></input></td>
 				</tr>
 			<?php 
