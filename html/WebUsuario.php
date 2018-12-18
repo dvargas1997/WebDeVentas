@@ -1,159 +1,224 @@
 <?php
 session_start();
 if(@!$_SESSION['user']){
-	header("location:index.html");
+  header("location:index.html");
 }
 ?>
 <!DOCTYPE html>
-<html len="es">
- <head>
-  <title>+Kotitas</title>
-  <meta charset="UTF-8">
+<html lang="en">
 
-    <link href="https://fonts.googleapis.com/css?family=Copse|Gochi+Hand|Handlee|Playfair+Display+SC" rel="stylesheet">
-	<link rel="stylesheet" href="Style/estilousuario.css">
+  <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
- </head>
- <body>
+    <title>Web usuario</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <header>
-                <br>
-                <br>
-                <br>
-          <h1>+kotitas</h1>
+    <!-- Custom styles for this template -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
 
+  </head>
 
-        </header>
-  <nav>
-    <ul class="nav">
-       <ul class="menu" >
-         <li><a href="">Productos</a>
-         <ul class="submenu">
-           <li><a href="#">Vestuario</a></li>
-           <ul>
-              <li><a href="vestuario_perros.php">Perros</a></li>
-               <li><a href="vestuario_gatos.php">Gatos</a></li>
-                <li><a href="vestuario_otros.php">otros</a></li>
-           </ul>
-           <li><a href="#">Accesorios</a></li>
-           <ul>
-              <li><a href="accesorios_perros.php">Perros</a></li>
-               <li><a href="accesorios_gatos.php">Gatos</a></li>
-                <li><a href="accesorios_otros.php">otros</a></li>
-           </ul>
-           <li><a href="#">Alimentos</a></li>
-           <ul>
-              <li><a href="alimento_perros.php">Perros</a></li>
-               <li><a href="alimento_gatos.php">Gatos</a></li>
-                <li><a href="alimento_otros.php">otros</a></li>
+  <body>
 
-           </ul>
-</ul>
-       </li>
-        
-            
-       </li>
-		 <li><a href="#">Cambiar Cuenta</a></li>
-		 <li><a href="Registro-Login/cerrarsesion.php">Cerrar Sesión</a></li>
-        </nav>
- 
-   <section id = "contenedor">
-<?php
-  $host = "localhost";
-  $user = "root";
-  $pw= "";
-  $db = "web_de_ventas";
-
-  $con = mysqli_connect($host,$user,$pw, $db) or die ("no se pudo conectar a la base de datos");
-//  mysqli_select_db($db,$con) or die (" no se encontro la base de datos");
-    $query = "SELECT * FROM  productos";
-    $resultado = mysqli_query($con, $query);
- 
-    echo "<table >
-            <tr> <td>";
-      $cf= 0;
-
-    while ( $fila = mysqli_fetch_array($resultado)) {
-     
-   echo "<left>";
-
-    echo "<br>$fila[producto] <br>";
-//    header('Content-Type: image/jpeg');
-  //  echo base64_encode($fila['imagenes']);
-    //    header('Content-Type: text/html');
-      ?>          
-
-      <img width="100px" height="100px;" src="data:image/jpg;base64,<?php echo base64_encode($fila['imagenes']); ?>"/>
-     
-<?php
-      echo "</left>";
-       echo "<left>";
-    echo "<br>$fila[precio] <br><br>";
-     echo "</left>";
-
-  echo "<left>";
-  echo "DESCRIPCION <br>";
-    echo "$fila[descripcion]<br>";
-	    echo "<input type='submit' name='Submit' value='Comprar'/> \n";  
-
-    echo "</left>";
-     $cf++;
-    if ($cf==7) {
-    echo "</td>";
-    echo "<td>";
-    }
-    
-  }
-  echo "</td></tr></table>";
-
-
-?>
-
-  
-  </section>
-  
-   
-    <footer>
-
-    <div class="container-footer">
-      
-      <div class="columna1">
-        <h2> Quienes Somos </h2>
-        <p> La visión de una empresa es una declaración o manifestación que indica hacia dónde se dirige una empresa o qué es aquello en lo que pretende convertirse en el largo plazo.</p>
-      </div>
-
-      <div class="columna2">
-        <h2>Redes Sociales</h2>
-        
-        <div class="row">
-          <img src="img/fb.png" >
-          <label >Facebook</label>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="">Pet World</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="Registro-Login/cerrarsesion.php">Cerrar sesion
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
-        
-        <div class="row">
-          <img src="img/twi.png" >
-          <label >Twitter</label>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+
+          <h1 class="my-4">Categorias</h1>
+          <div class="list-group">
+            <a href="#" class="list-group-item">Vestuario</a>
+            <a href="#" class="list-group-item">Accesorios</a>
+            <a href="#" class="list-group-item">Alimentos</a>
+          </div>
+
         </div>
+        <!-- /.col-lg-3 -->
 
-        <div class="row">
-          <img src="img/insta.png" >
-          <label>Instagram</label>
-        </div>		 
+        <div class="col-lg-9">
+
+          <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item One</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text"></p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Two</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Three</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Four</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Five</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">Item Six</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- /.row -->
+
+        </div>
+        <!-- /.col-lg-9 -->
 
       </div>
-      
-      <div class="columna3">
-        <h2>Informacion de contacto</h2>
-        
-                       <li>temuco, region de la araucania, Chile</li>
-                       <li>calle caupolican #325</li>
-                       <li>telefono: (452)2608637</li>
-                       <li>celular: +569 73230266</li>
-      </div>
+      <!-- /.row -->
 
     </div>
-  </footer>
- </body>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
 </html>
