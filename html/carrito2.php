@@ -1,39 +1,54 @@
+
+
+<center><font size= 6><p>Detalle de la Compra</p></font></center>
+
 <?php
+
 session_start();
 
 
- echo "<table style='position:absolute;top:100px;left:500px;' border = 1>" ;
-   echo "<center>";   
-
-$total = 0;
-foreach($_SESSION["shopping_cart"] as $keys => $values)
-{
-?>
-
-
-<center>
-  <center><font size= 6><p>Detalle de la Compra</p></font></center>
-<center><th width="40%">Descripción</th></center>
-<th width="10%" class='text-center'>Cantidad</th>
-<th width="20%" class='text-right'>Precio unitario</th>
-<th width="15%" class='text-right'>Total</th>
-
-</tr>
  
-<center><td><?php echo $values["item_name"]; ?></td></center>
-<center><td class='text-center'><?php echo $values["item_quantity"]; ?></td></center>
-<center><td class='text-right'>$ <?php echo $values["item_price"]; ?></td></center>
-<center><td class='text-right'>$ <?php echo number_format((int)$values["item_quantity"] * $values["item_price"],3); ?></td></center>
+
+
+
+$p = $_GET['producto'];
+  $c = $_GET['cantidad']; 
+
+  $pre = $_GET['precio']; 
+  $total = number_format((int)$c * $pre,3) ;
+  
+  echo "<table style='position:absolute;top:100px;left:500px;' border =1 >";
+echo "<tr>";
+echo "  <center><th> Descripción  </th></center>";
+echo "  <center><th> Cantidad </th></center>";
+echo "  <th> Precio unitario  </th>";
+echo "  <th> Total </th>";
+echo "</tr>";
+echo "<tr>";
+echo "<center>";
+echo "<td> " . $p . "</td>";
+echo "<td> " . $c . "</td>";
+echo "<center><td> " . $pre . "</td> </center>";
+echo "<td>". $total."</td>";
+
+echo "</center>";
+
+
+
+echo "</tr>";
+echo "</table>";
+echo "</center>";
+?>
 
 </tr>
 <?php
-$total = $total + ($values["item_quantity"] * $values["item_price"]);
-}
+
+
 ?>
 
-<center><strong><td colspan="3" align="center">Total</td></strong></center>
-<td align="right">$ <?php echo number_format($total,3); ?></td>
-</center>
+
+<br>
+<br>
 
 
 
