@@ -60,9 +60,9 @@ if(@!$_SESSION['user']){
 
           <h1 class="my-4">Categorias</h1>
           <div class="list-group">
-            <a href="#" class="list-group-item">Vestuario</a>
-            <a href="#" class="list-group-item">Accesorios</a>
-            <a href="#" class="list-group-item">Alimentos</a>
+            <a href="vestuario_perros.php" class="list-group-item">Vestuario</a>
+            <a href="accesorios_perros.php" class="list-group-item">Accesorios</a>
+            <a href="alimento_perros.php" class="list-group-item">Alimentos</a>
           </div>
 
         </div>

@@ -1,5 +1,9 @@
 <?php 
-
+	session_start();
+	if(@!$_SESSION['user'])
+	{
+	header("location:index.html");
+	}
 	$conexion=mysqli_connect('localhost','root','','web_de_ventas');
 
  ?>
@@ -51,7 +55,7 @@
                  </ul>
             </li>
 			<li><a href="registro-login/cerrarsesion.php">Cerrar Sesion</a></li>
-			<li><a href="index.html">Volver a la pagina principal</a></li>
+			<li><a href="WebUsuario.php">Volver a la pagina principal</a></li>
         </ul>
     </nav>
 
