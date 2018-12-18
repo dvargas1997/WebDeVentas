@@ -26,12 +26,14 @@ echo "<br>";
  ?>          
 <left><img width="300px" height="300px;" src="data:image/jpg;base64,<?php echo base64_encode($fila['imagenes']); ?>"/></a></left>
 <center>
-<h2>Cantidad: <input type="text" name="numero"/></h2>
-<br>
-<button><a href="carrito2.php">Comprar</button>
- <button ><a href="WebUsuario.php">Volver</button></a>
-</center>
-<?php
+<form action= "carrito2.php" method="GET">
+  <input type = "number" name= "cantidad">
+  <input type="hidden" name="precio" value='<?php echo $fila['precio']?>'>
+  <input type = "hidden" name= "descripcion" value='<?php echo $fila['descripcion']?>'>
+  <input type = "hidden" name= "producto" value='<?php echo $fila['producto']?>'>
+  <input type="Submit" value="Comprar" >
+
+</form>
     
     echo "<font size = 6><br>$ $fila[precio] <br><br></font>";
 
